@@ -7,7 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "NODE_ENV=test nyc tape ./tests/*.js | tap-spec",
+    "dev": "nodemon src/index.js",
+    "build": "node db/db_build.js",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
     "type": "git",
