@@ -2,7 +2,7 @@
 Mobile web app to help people reduce waste in a fun motivational way 
 
 
-#Tech Stack 
+# Tech Stack 
 
 [Core]
 
