@@ -33,7 +33,7 @@ Mobile web app to help people reduce waste in a fun motivational way
 - tape 
 
 ## Dependencies 
-- bcrypt
+- bcrypt.js
 - body-parser 
 - env2 
 - express 
