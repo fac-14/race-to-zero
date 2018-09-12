@@ -19,7 +19,11 @@ router.get("/", landing.get);
 router.get("/dashboard", dashboard.get);
 router.get("/challSelect", challSelect.get);
 router.get("/inventory", inventory.get);
-router.get("/make-error", errorRoute);
+
+if (process.env.NODE_ENV === "test") {
+    router.get("/make-error", errorRoute);
+}
+
 
 router.use(error.client);
 router.use(error.server);
