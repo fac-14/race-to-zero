@@ -1,3 +1,3 @@
 exports.get = (req, res) => {
-  res.render("itemSelected");
+  res.render("challSelect");
 };
