@@ -1,5 +1,7 @@
 // go connections
-const pgp = require('pg-promise');
+"use strict";
+
+const pgp = require('pg-promise')();
 const url = require('url');
 require('env2')('./config.env');
 
