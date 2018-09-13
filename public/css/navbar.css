@@ -1,0 +1,35 @@
+nav{
+  display: flex;
+  width: 100vw;
+  
+}
+#xp-section{
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  height: 3rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 50vw;
+  height: 20px;
+}
+#xp-bar{
+  
+}
+
+#avatar-section{
+  background-color: aquamarine;
+}
+h3{
+margin: 1rem;
+}
+#profile-pic{
+  width: 8rem;
+}
