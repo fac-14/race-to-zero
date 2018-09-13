@@ -29,7 +29,6 @@ router.get("/learn", learn.get);
 router.get("/stats", userStats.get);
 router.get("/inventory-item", itemSelect.get);
 router.get("/my-challenge/", acceptedChallSelect.get);
-
 // accepting and completing challenges
 router.post("/challenge/accepted", (req, res) => {
   // insert query here to add accepted challenge to database
@@ -43,7 +42,9 @@ router.post("/challenge/completed", (req, res) => {
   res.redirect(302, "/dashboard");
   res.end();
 });
-
+if (process.env.NODE_ENV === "test") {
+    router.get("/make-error", errorRoute);
+}
 router.use(error.client);
 // router.use(error.server);
 
