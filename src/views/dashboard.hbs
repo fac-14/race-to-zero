@@ -1,9 +1,19 @@
 <h2>This is home dashboard where user can see their challenges</h2>
 
-<ul>
-    <li>Item 1</li>
-    <li>item 2</li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-    <li>item 5</li>
-</ul>
+<section class="challenges-container">
+    <header class="challenges-header">
+        <h1 class="main-title">New Challenges</h1>
+    </header>
+    <div class="challenges-container">
+        {{#each challenges}}
+        <div class="challenge-overview">
+            <img src='{{this.img_link}}'>
+            <h3>{{this.title}}</h3>
+        </div>
+        {{/each}}
+
+
+
+    </div>
+
+</section>

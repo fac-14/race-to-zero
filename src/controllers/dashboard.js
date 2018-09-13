@@ -1,3 +1,8 @@
+const queries = require("../model/index");
+
 exports.get = (req, res) => {
-  res.render("dashboard");
+  queries.getChallenges().then(allChallenges => {
+    console.log("test: ", allChallenges);
+    res.render("dashboard", { challenges: allChallenges });
+  });
 };
