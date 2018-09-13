@@ -5,7 +5,7 @@
         <h1 class="main-title">New Challenges</h1>
     </header>
     <div class="challenges-container">
-        {{#each challenges}}
+        {{#each newChallenges}}
         <div class="challenge-overview">
             <img src='{{this.img_link}}'>
             <h3>{{this.title}}</h3>
@@ -13,9 +13,40 @@
                 Find out more
             </button>
             {{/each}}
+        </div>
 
+</section>
 
+<section class="challenges-container">
+    <header class="challenges-header">
+        <h1 class="main-title">Accepted Challenges</h1>
+    </header>
+    <div class="challenges-container">
+        {{#each acceptedChallenges}}
+        <div class="challenge-overview">
+            <img src='{{this.img_link}}'>
+            <h3>{{this.title}}</h3>
+            <button class="challenge-button" id="id-{{this.id}}" onclick="window.location.href='/challenges/{{this.title}}'">
+                Find out more
+            </button>
+            {{/each}}
+        </div>
 
+</section>
+
+<section class="challenges-container">
+    <header class="challenges-header">
+        <h1 class="main-title">Completed Challenges</h1>
+    </header>
+    <div class="challenges-container">
+        {{#each completedChallenges}}
+        <div class="challenge-overview">
+            <img src='{{this.img_link}}'>
+            <h3>{{this.title}}</h3>
+            <button class="challenge-button" id="id-{{this.id}}" onclick="window.location.href='/challenges/{{this.title}}'">
+                Find out more
+            </button>
+            {{/each}}
         </div>
 
 </section>

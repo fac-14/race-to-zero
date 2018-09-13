@@ -1,8 +1,17 @@
 const queries = require("../model/index");
 
 exports.get = (req, res) => {
-  queries.getChallenges().then(allChallenges => {
-    console.log("test: ", allChallenges);
-    res.render("dashboard", { challenges: allChallenges });
-  });
+
+  const newChallenges = queries.getChallenges();
+  const acceptedChallenges = queries.getAcceptedChallenges();
+  const completedChallenges = queries.getCompletedChallenges();
+
+  Promise.all([newChallenges, acceptedChallenges, completedChallenges])
+    .then(challenges => {
+      res.render("dashboard", {
+        newChallenges: challenges[0],
+        acceptedChallenges: challenges[1],
+        completedChallenges: challenges[2]
+      });
+    })
 };
