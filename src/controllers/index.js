@@ -22,7 +22,7 @@ router.get("/", landing.get);
 // router.get("login", login.get);
 // router.post("login", login.post);
 router.get("/dashboard", dashboard.get);
-router.get("/challenge", challSelect.get);
+router.get("/challenges/:challenges", challSelect.get);
 router.get("/inventory", inventory.get);
 router.get("/make-error", errorRoute);
 router.get("/learn", learn.get);
@@ -43,7 +43,7 @@ router.post("/challenge/completed", (req, res) => {
   res.end();
 });
 if (process.env.NODE_ENV === "test") {
-    router.get("/make-error", errorRoute);
+  router.get("/make-error", errorRoute);
 }
 router.use(error.client);
 // router.use(error.server);

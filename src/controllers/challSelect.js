@@ -1,3 +1,11 @@
+const queries = require("../model/index");
+
 exports.get = (req, res) => {
-  res.render("challSelect", { layout: "content-selected" });
+  queries.getSingleChallenge().then(challengeDetails => {
+    console.log("challenge details: ", challengeDetails);
+    res.render("challSelect", {
+      layout: "content-selected",
+      challenge: challengeDetails[0]
+    });
+  });
 };

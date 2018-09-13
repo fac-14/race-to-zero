@@ -9,11 +9,13 @@
         <div class="challenge-overview">
             <img src='{{this.img_link}}'>
             <h3>{{this.title}}</h3>
+            <button class="challenge-button" id="id-{{this.id}}" onclick="window.location.href='/challenges/{{this.title}}'">
+                Find out more
+            </button>
+            {{/each}}
+
+
+
         </div>
-        {{/each}}
-
-
-
-    </div>
 
 </section>
