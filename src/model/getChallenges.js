@@ -1,12 +1,12 @@
-const dbConnection = require('../../db/db_connection'); 
+/* eslint-disable */
+const db = require('../../db/db_connection'); 
 
-module.exports = () => 
-    new Promise((resolve,reject) => {
-        dbConnection.query(
-            `SELECT * FROM challenges`,
-        (err,res) =>{
-            if (err) return reject(err);
-            resolve(res);
-        }
-    )
-    });
+const getChallenge = () => new Promise((resolve,reject)=>{
+        db.query(`SELECT * FROM challenges;`)
+        .then(res=>{
+            resolve(res)
+        })
+        .catch(err => reject(err))
+    })
+  
+    module.exports = getChallenge;
