@@ -28,7 +28,7 @@ describe("Test the dashboard page", () => {
 describe("Test the challSelect page", () => {
   test("Expecting a 200 status return", done => {
     supertest(app)
-      .get("/challenge/")
+      .get("/challenges/:challenges/")
       .then(response => {
         expect(response.statusCode).toBe(200);
         done();

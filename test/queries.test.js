@@ -22,16 +22,3 @@ describe("getting challenges", () => {
     });
   });
 });
-
-// describe('Test DB is generating', () => {
-//     test('getting a result db', done => {
-//             .then(res => {
-//             console.log('passed db build')
-//             expect(res).toBeTruthy();
-//             done();
-//         })
-//             .catch(err => {
-//                 console.log('err building db');
-//             })
-//     })
-// })
