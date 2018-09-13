@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/fac-14/race-to-zero.svg?branch=master)](https://travis-ci.com/fac-14/race-to-zero) [![codecov](https://codecov.io/gh/fac-14/race-to-zero/branch/master/graph/badge.svg)](https://codecov.io/gh/fac-14/race-to-zero)
+
 ## Overview
 
 ### Description
