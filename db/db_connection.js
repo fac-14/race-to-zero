@@ -6,6 +6,7 @@ const url = require("url");
 require("env2")("./config.env");
 
 let DB_URL = process.env.DATABASE_URL;
+console.log("overall process env ", process.env.DATABASE_URL);
 if (process.env.NODE_ENV === "test") {
   DB_URL = process.env.TEST_DB_URL;
   console.log("in if condition ", process.env.TEST_DB_URL);
