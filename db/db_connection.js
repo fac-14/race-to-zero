@@ -34,8 +34,6 @@ const localDB = {
 };
 
 
-
-
 const connection =
   process.env.NODE_ENV === "test" ? testDB : localDB;
 
