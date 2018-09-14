@@ -1,3 +1,4 @@
+// can use getAcceptedChallenges for this so delete later
 const getCompletedChallenges = () => {
     return new Promise((resolve, reject) => {
         const result = [
