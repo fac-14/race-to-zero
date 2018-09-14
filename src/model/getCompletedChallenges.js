@@ -1,2 +1,1 @@
-// getCompletedChalllenges
-const db = require('../../db/db_connection'); 
+// can use getAcceptedChallenges for this so delete later
