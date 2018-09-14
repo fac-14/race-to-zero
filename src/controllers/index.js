@@ -3,8 +3,8 @@ const express = require("express");
 const router = express.Router();
 
 const landing = require("./landing");
-const signup = require("./signup");
-const login = require("./login");
+// const signup = require("./signup");
+// const login = require("./login");
 const dashboard = require("./dashboard");
 const challSelect = require("./challSelect");
 const inventory = require("./inventory");
@@ -12,6 +12,7 @@ const learn = require("./learn");
 const userStats = require("./user-stats");
 const itemSelect = require("./item-select");
 const acceptedChallSelect = require("./accepted-challenge-select");
+const queries = require('../model/index')
 
 const errorRoute = require("./error-route");
 const error = require("./error");
@@ -32,6 +33,7 @@ router.get("/my-challenge/", acceptedChallSelect.get);
 // accepting and completing challenges
 router.post("/challenge/accepted", (req, res) => {
   // insert query here to add accepted challenge to database
+  queries.acceptChallenge(0, 1);
   console.log("Challenge accepted!");
   res.redirect(302, "/dashboard");
   res.end();

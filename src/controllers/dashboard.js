@@ -3,8 +3,8 @@ const queries = require("../model/index");
 exports.get = (req, res) => {
 
   const newChallenges = queries.getChallenges();
-  const acceptedChallenges = queries.getAcceptedChallenges();
-  const completedChallenges = queries.getCompletedChallenges();
+  const acceptedChallenges = queries.getAcceptedChallenges(1, 1);
+  const completedChallenges = queries.getAcceptedChallenges(2, 2);
 
   Promise.all([newChallenges, acceptedChallenges, completedChallenges])
     .then(challenges => {
@@ -14,4 +14,5 @@ exports.get = (req, res) => {
         completedChallenges: challenges[2]
       });
     })
+    .catch(err => console.log(err));
 };
