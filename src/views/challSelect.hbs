@@ -2,7 +2,7 @@
 
 <section class="challenge-page">
 
-  <img class="challenge-img" src="{{challenge.img_link}}">
+  {{!-- <img class="challenge-img" src="{{challenge.img_link}}"> --}}
 
   <h2>{{{challenge.title}}}</h2>
 
@@ -17,14 +17,16 @@
     <h3>Why</h3>
     <p>
       {{{challenge.why}}}
+      {{{challenge.id}}}
     </p>
   </article>
 
   <a href="{{{challenge.ext_link}}}" target="_blank" class="ext-link"><button>Find out more</button></a>
 
   <form action="/challenge/accepted" method="POST">
+    <input name="challenge_id" type="hidden" value="{{ challenge.id }}">
     <h1>Accept challenge?</h1>
-    <button type="submit">Yes!</button>
+    <button class="acceptBtn" type="submit">Yes!</button>
   </form>
 
 

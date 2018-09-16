@@ -23,7 +23,7 @@ router.get("/", landing.get);
 // router.get("login", login.get);
 // router.post("login", login.post);
 router.get("/dashboard", dashboard.get);
-router.get("/challenges/:challenges", challSelect.get);
+router.get("/challenges/:id", challSelect.get);
 router.get("/inventory", inventory.get);
 router.get("/make-error", errorRoute);
 router.get("/learn", learn.get);
@@ -31,9 +31,11 @@ router.get("/stats", userStats.get);
 router.get("/inventory-item", itemSelect.get);
 router.get("/my-challenge/", acceptedChallSelect.get);
 // accepting and completing challenges
-router.post("/challenge/accepted", (req, res) => {
+router.post("/challenge/accepted/", (req, res) => {
+  console.log(req.body.challenge_id);
+
   // insert query here to add accepted challenge to database
-  queries.acceptChallenge(0, 1);
+  queries.acceptChallenge(req.body.challenge_id, 1);
   console.log("Challenge accepted!");
   res.redirect(302, "/dashboard");
   res.end();

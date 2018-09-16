@@ -1,7 +1,8 @@
 const queries = require("../model/index");
 
 exports.get = (req, res) => {
-  queries.getSingleChallenge(2).then(challengeDetails => {
+  const { id } = req.params;
+  queries.getSingleChallenge(id).then(challengeDetails => {
     // console.log("challenge details: ", challengeDetails);
     res.render("challSelect", {
       layout: "content-selected",
