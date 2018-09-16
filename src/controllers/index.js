@@ -32,8 +32,6 @@ router.get("/inventory-item", itemSelect.get);
 router.get("/my-challenge/", acceptedChallSelect.get);
 // accepting and completing challenges
 router.post("/challenge/accepted/", (req, res) => {
-  console.log(req.body.challenge_id);
-
   // insert query here to add accepted challenge to database
   queries.acceptChallenge(req.body.challenge_id, 1);
   console.log("Challenge accepted!");
