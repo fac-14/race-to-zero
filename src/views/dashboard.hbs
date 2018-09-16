@@ -8,9 +8,8 @@
         {{#each newChallenges}}
         <div class="challenge-overview">
             {{!-- <img src='{{this.img_link}}'> --}}
-            <h3>{{this.title}}</h3>
-            <button class="challenge-button" id="{{this.id}}"
-                {{!-- onclick="window.location.href='/challenges/{{this.title}}'"--}}>
+            <h3 class="newChallH3">{{this.title}} : {{this.id}}</h3>
+            <button class="new-challenge-button" id="{{this.id}}" onclick="window.location.href='/new-challenges/{{this.id}}'">
                 Find out more
             </button>
             {{/each}}
@@ -25,10 +24,11 @@
         {{#each acceptedChallenges}}
         <div class="challenge-overview">
             {{!-- <img src='{{this.img_link}}'>
-                --}}
-                <h3>{{this.title}}</h3>
-                <button class="challenge-button" id="{{this.id}}" onclick="window.location.href='/challenges/{{this.title}}'">
-                    Find out more </button> {{/each}} </div>
+            --}}
+            <h3>{{this.title}} : {{ this.challenge_id }}</h3>
+            <button class="acc-challenge-button" id="{{this.id}}" onclick="window.location.href='/acc-challenges/{{this.challenge_id}}'">
+                Find out more </button> {{/each}}
+        </div>
 </section>
 <section class="challenges-container">
     <header class="challenges-header">
@@ -37,8 +37,8 @@
     <div class="challenges-container">
         {{#each completedChallenges}}
         <div class="challenge-overview">
-            <h3>{{this.title}}</h3>
-            <button class="challenge-button" id="id-{{this.id}}" onclick="window.location.href='/challenges/{{this.title}}'">
+            <h3>{{this.title}} : {{ this.challenge_id }}</h3>
+            <button class="challenge-button" id="id-{{this.id}}" onclick="window.location.href='/comp-challenges/{{this.challenge_id}}'">
                 Find out more
             </button>
             {{/each}}

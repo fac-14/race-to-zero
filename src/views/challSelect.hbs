@@ -5,6 +5,7 @@
   {{!-- <img class="challenge-img" src="{{challenge.img_link}}"> --}}
 
   <h2>{{{challenge.title}}}</h2>
+  <h2 class="h2-id">{{{challenge.id}}}</h2>
 
   <article class="challenge-what">
     <h3>What</h3>
@@ -22,12 +23,11 @@
 
   <a href="{{{challenge.ext_link}}}" target="_blank" class="ext-link"><button>Find out more</button></a>
 
-
   {{!-- here we should try and show the button related to the challenge status (accept or completed) --}}
 
-  <form action="/challenge/accepted" method="POST">
+  {{!-- <form action="/challenge/accepted" method="POST">
     <input name="challenge_id" type="hidden" value="{{ challenge.id }}">
     <h1>Accept challenge?</h1>
     <button class="acceptBtn" type="submit">Yes!</button>
-  </form>
+  </form> --}}
 </section>

@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const handlebars = require('express-handlebars');
 const controllers = require('./controllers/index');
-const helpers = require('./views/helpers/function');
+const helpers = require('./views/helpers/index');
 
 const app = express();
 app.set('port', process.env.PORT || 3000);
