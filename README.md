@@ -64,6 +64,7 @@ create a `race-zero` and `test_race2` database in psql and alter the database ow
 $ psql (or pgcli)
 # CREATE DATABASE race_zero;
 # CREATE DATABASE test_race2;
+# CREATE SUPERUSER simon WITH PASSWORD 'pw123';
 # ALTER DATABASE race_zero OWNER TO simon;
 # ALTER DATABASE test_race2 OWNER TO simon;
 ```
