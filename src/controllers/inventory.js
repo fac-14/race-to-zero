@@ -1,4 +1,11 @@
 // hi
+
+const queries = require("../model/index");
+
 exports.get = (req, res) => {
-    res.render("inventory");
+  queries.getBoughtItems().then(boughtItems => {
+    console.log("boughtItems", boughtItems);
+    console.log("bought items reached");
+    res.render("inventory", { boughtItems: boughtItems[0] });
+  });
 };
