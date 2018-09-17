@@ -1,1 +1,25 @@
 /* wooooo stylin */
+
+/* Learn Section */ 
+
+.learn-container {
+    display:flex;
+    flex-direction: row;
+}
+
+.holder {
+    display:block;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+margin: 10px;
+  }
+
+.holder h2{
+      text-align: center;
+      font-size: 1.4em;
+  }
+
+  .h1 {
+    background: blue;
+  }
