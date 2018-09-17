@@ -12,4 +12,3 @@ const getAccepetedChallenges = (userId, challengeStatus) => new Promise((resolve
 // should work for accepted and completed challenges just change challengeStatus
 
 module.exports = getAccepetedChallenges;
-
