@@ -7,4 +7,6 @@ const completeChallenge = (challengeId, userId) => new Promise((resolve, reject)
     .catch(err => reject(err))
 })
 
+// add a query to take reward_points from the challenge and add them to the users points
+
 module.exports = completeChallenge;

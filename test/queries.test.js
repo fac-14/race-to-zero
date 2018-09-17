@@ -30,6 +30,13 @@ describe("getting all challenges", () => {
 describe("accept challenge", () => {
   test("inserting challlenge id into challenge status", () => {
     expect.assertions(1);
+    return queries.acceptChallenge(1, 1).then(res => {
+      // console.log(res);
+      expect(res).toBeTruthy();
+    })
+  })
+  test("inserting challlenge id into challenge status", () => {
+    expect.assertions(1);
     queries.acceptChallenge(1, 1);
     return queries.getAcceptedChallenges(1, 1).then(res => {
       expect(res.length).toBe(2);
@@ -41,7 +48,7 @@ describe('get accepted challenges', () => {
   test('returns the accepted challenges of specific user', () => {
     expect.assertions(1);
     return queries.getAcceptedChallenges(1, 1).then(res => {
-      // console.log(res);
+      console.log(res);
       expect(res).toBeTruthy();
     })
   })
