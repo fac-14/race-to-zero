@@ -49,7 +49,7 @@ describe('get accepted challenges', () => {
   test('returns the accepted challenges of specific user', () => {
     expect.assertions(1);
     return queries.getAcceptedChallenges(1, 1).then(res => {
-      console.log(res);
+      // console.log(res);
       expect(res).toBeTruthy();
     })
   })
