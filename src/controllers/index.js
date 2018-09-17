@@ -23,9 +23,11 @@ router.get("/", landing.get);
 // router.get("login", login.get);
 // router.post("login", login.post);
 router.get("/dashboard", dashboard.get);
+// enables u to click to go to single challenge page
 router.get("/new-challenges/:id", challSelect.get);
 router.get("/acc-challenges/:id", challSelect.get);
 router.get("/comp-challenges/:id", challSelect.get);
+
 router.get("/inventory", inventory.get);
 router.get("/make-error", errorRoute);
 router.get("/learn", learn.get);
