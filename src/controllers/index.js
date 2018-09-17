@@ -56,6 +56,14 @@ router.post("/challenge/completed/", (req, res) => {
   res.end();
 });
 
+// buying an item
+router.post("/inventory/item-bought/", (req, res) => {
+  queries.buyItem(req.body.item_id, 1);
+  console.log("Item bought!");
+  res.redirect(302, "/inventory");
+  res.end();
+});
+
 if (process.env.NODE_ENV === "test") {
   router.get("/make-error", errorRoute);
 }

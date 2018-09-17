@@ -8,6 +8,7 @@ const getSingleChallenge = require("./getSingleChallenge");
 const getBoughtItems = require("./getBoughtItems");
 const getSuggestedItems = require("./getSuggestedItems");
 const getSingleItem = require("./getSingleItem");
+const buyItem = require("./buyItem");
 
 module.exports = {
   acceptChallenge,
@@ -18,5 +19,6 @@ module.exports = {
   getSingleChallenge,
   getBoughtItems,
   getSuggestedItems,
-  getSingleItem
+  getSingleItem,
+  buyItem
 };
