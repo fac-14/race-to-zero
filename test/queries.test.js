@@ -39,6 +39,7 @@ describe("accept challenge", () => {
     expect.assertions(1);
     queries.acceptChallenge(1, 1);
     return queries.getAcceptedChallenges(1, 1).then(res => {
+      // console.log(res);
       expect(res.length).toBe(2);
     })
   })
