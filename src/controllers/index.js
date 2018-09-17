@@ -23,7 +23,11 @@ router.get("/", landing.get);
 // router.get("login", login.get);
 // router.post("login", login.post);
 router.get("/dashboard", dashboard.get);
-router.get("/challenges/:challenges", challSelect.get);
+// enables u to click to go to single challenge page
+router.get("/new-challenges/:id", challSelect.get);
+router.get("/acc-challenges/:id", challSelect.get);
+router.get("/comp-challenges/:id", challSelect.get);
+
 router.get("/inventory", inventory.get);
 router.get("/make-error", errorRoute);
 router.get("/learn", learn.get);
@@ -32,17 +36,18 @@ router.get("/inventory-item", itemSelect.get);
 router.get("/my-challenge/", acceptedChallSelect.get);
 
 // accepting and completing challenges
-router.post("/challenge/accepted", (req, res) => {
+router.post("/challenge/accepted/", (req, res) => {
   // insert query here to add accepted challenge to database
-  queries.acceptChallenge(1, 1);
-  console.log("Challenge accepted!");
+  queries.acceptChallenge(req.body.challenge_id, 1);
   res.redirect(302, "/dashboard");
   res.end();
 });
 
-router.post("/challenge/completed", (req, res) => {
+router.post("/challenge/completed/", (req, res) => {
+  console.log(req.body);
+
   // insert query here to add completed challenge to database
-  queries.completeChallenge(1, 1);
+  queries.completeChallenge(req.body.challenge_id, 1)
   console.log("Challenge completed!");
   res.redirect(302, "/dashboard");
   res.end();
