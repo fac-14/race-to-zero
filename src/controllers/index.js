@@ -9,7 +9,7 @@ const dashboard = require("./dashboard");
 const challSelect = require("./challSelect");
 const inventory = require("./inventory");
 const suggestedItem = require("./suggested-item-select");
-// const boughtItem = require("./get-bought-items");
+const boughtItem = require("./bought-item-select");
 
 const learn = require("./learn");
 const userStats = require("./user-stats");
@@ -32,7 +32,7 @@ router.get("/comp-challenges/:id", challSelect.get);
 // routes for inventory section
 router.get("/inventory", inventory.get);
 router.get("/inventory/suggested-item/:id", suggestedItem.get);
-// router.get("/inventory/boughtItem")
+router.get("/inventory/bought-item/:id", boughtItem.get);
 
 router.get("/make-error", errorRoute);
 router.get("/learn", learn.get);
