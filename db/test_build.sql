@@ -92,4 +92,7 @@ VALUES
     (1, 3, 0),
     (2, 3, 1);
 
+ALTER TABLE challenge_status 
+ADD CONSTRAINT chall_stat_unique UNIQUE (challenge_id, user_id, status);
+
 COMMIT;
