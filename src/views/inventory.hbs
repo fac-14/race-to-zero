@@ -11,7 +11,7 @@
         <div class="items-overview">
             {{!-- <img src='{{this.img_link}}'> --}}
             <h3 class="newItemH3">{{this.title}} : {{this.id}}</h3>
-            <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/bought-item/{{this.id}}'">
+            <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/inventory/bought-item/{{this.id}}'">
                 Find out more
             </button>
             {{/each}}
@@ -28,7 +28,7 @@
         <div class="items-overview">
             {{!-- <img src='{{this.img_link}}'> --}}
             <h3 class="newItemH3">{{this.title}} : {{this.id}}</h3>
-            <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/suggested-item/{{this.id}}'">
+            <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/inventory/suggested-item/{{this.id}}'">
                 Find out more
             </button>
             {{/each}}
