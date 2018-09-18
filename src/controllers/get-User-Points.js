@@ -1,4 +1,4 @@
-const queries = require("../model");
+const queries = require("../model/index");
 
 exports.get = (req, res) => {
   queries.getUserPoints(1).then(points => {
