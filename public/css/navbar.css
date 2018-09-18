@@ -1,37 +1,70 @@
-nav{
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+@font-face {
+  font-family: "V-Gerb-Bold";
+  src: url("../../public/assets/fonts/V-GERB-BOLD.ttf") format("truetype");
+}
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-width: 50%;
+  height: 2rem;
   display: flex;
-  width: 100vw;
+  justify-content: space-between;
+  background-color: #404973;
+  color: #fbf6f1;
+  border-bottom-left-radius: 10px;
 }
 
-#xp-section{
-  background-color: aqua;
+#xp-section {
   display: flex;
-  flex-direction: row;
-  width: 70vw;
-  height: 3rem;
   align-items: center;
-  justify-content: flex-start;
 }
 
-progress[value] {
+#xp-section > h3 {
+  margin: 0.5rem;
+  margin-left: 1rem;
+}
+
+#xp-bar {
+  margin: 0.5rem;
+}
+
+#xp-bar[value] {
   /* Reset the default appearance */
   -webkit-appearance: none;
-   appearance: none;
+  appearance: none;
+  width: 25vw;
+  height: 0.5rem;
 }
 
-#xp-bar{
-  width: 50vw;
-  height: 20px;
+#xp-bar[value]::-webkit-progress-bar {
+  background-color: #fbf6f1;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
-#avatar-section{
-  background-color: aquamarine;
+#xp-bar[value]::-webkit-progress-value {
+  background-color: #00ba9f;
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%);
+  border-radius: 2px;
 }
 
-h3{
-margin: 1rem;
+#avatar-section {
+  text-align: right;
 }
 
-#profile-pic{
-  width: 8rem;
+#profile-pic {
+  height: 4rem;
+  border: #404973 0.5rem solid;
+  border-radius: 100%;
+  margin-right: 0.25rem;
 }
+
+#avatar-section > h4 {
+  font-size: 1rem;
+  margin: 0;
+  margin: 0.5rem;
+}
+
+/*# sourceMappingURL=navbar.css.map */

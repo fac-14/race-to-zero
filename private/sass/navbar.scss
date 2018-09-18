@@ -1,0 +1,65 @@
+@import "colors";
+@import "fonts";
+@import "sizes";
+
+nav{
+  position: fixed;
+  top:0;
+  right: 0;
+  min-width: 50%;
+  height: $large;
+  display: flex;
+  justify-content: space-between;
+  background-color: $navy1;
+  color: $white;
+  border-bottom-left-radius: 10px;
+}
+
+
+#xp-section{
+display:flex;
+align-items:center; 
+}
+#xp-section > h3{
+  margin: $small;
+  margin-left: $medium;
+}
+#xp-bar{
+  margin: $small;
+}
+#xp-bar[value] {
+  /* Reset the default appearance */
+-webkit-appearance: none;
+appearance: none;
+
+  width: 25vw;
+  height: $small;
+}
+#xp-bar[value]::-webkit-progress-bar {
+  background-color: $white;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+#xp-bar[value]::-webkit-progress-value {
+  background-color: $green1;
+  background-image:
+	   -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%);
+  border-radius: 2px;
+}
+
+#avatar-section{
+ text-align: right;
+}
+#profile-pic{
+  height: 4rem;
+  border: $navy1 $small solid;
+  border-radius: 100%;
+  margin-right: $smallest;
+}
+#avatar-section > h4{
+  font-size: $medium;
+  margin: 0;
+  margin: $small;
+}

@@ -1,0 +1,19 @@
+@import "colors";
+@import "fonts";
+@import "sizes";
+
+#foot-navbar{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $navy1;
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  height: $large;
+}
+
+#foot-navbar > a {
+  color: $white;
+  text-decoration: none;
+}

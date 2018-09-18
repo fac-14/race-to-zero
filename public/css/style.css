@@ -138,12 +138,15 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font: 100% "Dosis", sans-serif;
   font-size: medium;
   color: #1d2425;
   background-color: #fbf6f1;
-  padding: 0.5rem;
 }
 
 h1 {

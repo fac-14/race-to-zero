@@ -3,12 +3,15 @@
 @import "sizes";
 @import "reset";
 
+*{
+  box-sizing: border-box;
+}
+
 body {
   font: 100% $main-text;
   font-size: medium;
   color: $black;
   background-color: $white;
-  padding: $small;
 }
 
 h1 {
