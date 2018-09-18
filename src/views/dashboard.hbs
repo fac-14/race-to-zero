@@ -1,5 +1,14 @@
-<section class="challenges-container">
+ {{!-- <body onload="document.getElementById('defaultOpen').click()"> --}}
+ <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'new-challenge')" id="defaultOpen">New Challenges</button>
+  <button class="tablinks" onclick="openCity(event, 'accepted-challenge')">Accepted Challenges</button>
+  <button class="tablinks" onclick="openCity(event, 'completed-challenge')">Completed Challenges</button>
+</div>
+ 
+ 
 
+ <!-- New Challenges -->
+<section id="new-challenge" class="challenges-container tabcontent">
     <header class="challenges-header">
         <h2 class="main-title">New Challenges</h2>
     </header>
@@ -17,7 +26,9 @@
 
 </section>
 
-<section class="challenges-container">
+<!-- Accepted Challenges -->
+
+<section id="accepted-challenge" class="challenges-container tabcontent">
     <header class="challenges-header">
         <h2 class="main-title">Accepted Challenges</h2>
     </header>
@@ -32,7 +43,10 @@
                 Find out more </button> {{/each}}
         </div>
 </section>
-<section class="challenges-container">
+
+<!-- Accepted challenge -->
+
+<section id="completed-challenge" class="challenges-container tabcontent">
     <header class="challenges-header">
         <h2 class="main-title">Completed Challenges</h2>
     </header>

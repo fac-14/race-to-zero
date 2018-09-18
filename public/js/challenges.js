@@ -1,12 +1,12 @@
-var challengePage = document.querySelector(".challenge-page");
-var url = window.location.href.split("/")[3];
-var h2id = document.querySelector(".h2-id");
+let challengePage = document.querySelector(".challenge-page");
+let url = window.location.href.split("/")[3];
+let h2id = document.querySelector(".h2-id");
 
 (function checkUrlandCreateForm(url) {
-  var f = document.createElement("form");
-  var s = document.createElement("input"); //input element, Submit button
-  var id = document.createElement("input");
-  var h2 = document.createElement("h2");
+  let f = document.createElement("form");
+  let s = document.createElement("input"); //input element, Submit button
+  let id = document.createElement("input");
+  let h2 = document.createElement("h2");
 
   if (url === "new-challenges") {
     f.setAttribute("method", "post");
