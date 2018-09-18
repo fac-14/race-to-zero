@@ -1,9 +1,13 @@
-// go tests
 const fs = require("fs");
 const dbConnection = require("./db_connection");
+const assert = require("assert");
 
-const sql = fs.readFileSync(`${__dirname}/test_build.sql`).toString();
+const initialiseTestDatabase = () => {
+  fs.readFile(`${__dirname}/test_build.sql`, 'utf8', (err, sql) => {
+    assert(!err, err);
 
-const initialiseTestDatabase = () => dbConnection.query(sql);
+    dbConnection.query(sql);
+  });
+}
 
 module.exports = initialiseTestDatabase;

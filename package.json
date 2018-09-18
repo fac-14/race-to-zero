@@ -20,7 +20,8 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest --detectOpenHandles",
+    "lint": "eslint .",
+    "test": "npm run lint && jest --detectOpenHandles",
     "dev": "nodemon src/index.js",
     "build": "node db/db_build.js",
     "report-coverage": "codecov"
