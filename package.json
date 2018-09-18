@@ -15,7 +15,8 @@
       "!test/**",
       "!coverage/**",
       "!node_modules/**",
-      "!**/index.js"
+      "!**/index.js",
+      "!src/model/topics.js"
     ]
   },
   "scripts": {
