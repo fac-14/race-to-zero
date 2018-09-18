@@ -9,6 +9,8 @@ const getBoughtItems = require("./getBoughtItems");
 const getSuggestedItems = require("./getSuggestedItems");
 const getSingleItem = require("./getSingleItem");
 const buyItem = require("./buyItem");
+const updatePoints = require('./updatePoints')
+const getUserPoints = require('./getUserPoints')
 
 module.exports = {
   acceptChallenge,
@@ -20,5 +22,7 @@ module.exports = {
   getBoughtItems,
   getSuggestedItems,
   getSingleItem,
-  buyItem
+  buyItem,
+  updatePoints,
+  getUserPoints
 };

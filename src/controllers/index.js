@@ -10,16 +10,13 @@ const challSelect = require("./challSelect");
 const inventory = require("./inventory");
 const suggestedItem = require("./suggested-item-select");
 const boughtItem = require("./bought-item-select");
-
 const learn = require("./learn");
 const userStats = require("./user-stats");
-
 const queries = require('../model/index')
 const singleTopic = require('./getSingleTopic');
-
-
 const errorRoute = require("./error-route");
 const error = require("./error");
+const getUserPoints = require('./get-User-Points')
 
 router.get("/", landing.get);
 // router.get("signup", signup.get);
@@ -36,7 +33,6 @@ router.get("/comp-challenges/:id", challSelect.get);
 router.get("/inventory", inventory.get);
 router.get("/inventory/suggested-item/:id", suggestedItem.get);
 router.get("/inventory/bought-item/:id", boughtItem.get);
-
 router.get("/make-error", errorRoute);
 router.get("/learn", learn.get);
 router.get("/stats", userStats.get);
@@ -53,11 +49,9 @@ router.post("/challenge/accepted/", (req, res) => {
 });
 
 router.post("/challenge/completed/", (req, res) => {
-  console.log(req.body);
-
   // insert query here to add completed challenge to database
-  queries.completeChallenge(req.body.challenge_id, 1);
-  console.log("Challenge completed!");
+  queries.completeChallenge(req.body.challenge_id, 1)
+  // console.log("Challenge completed!");
   res.redirect(302, "/dashboard");
   res.end();
 });
