@@ -10,7 +10,6 @@ beforeEach(() => initialiseTestDatabase());
 afterEach(() => clearTestDatabase());
 afterAll(() => db.$pool.end());
 
-// console.log("db ", db);
 
 describe("getting all challenges", () => {
   test("get challenges from db", () => {
@@ -31,7 +30,6 @@ describe("accept challenge", () => {
   test("inserting challlenge id into challenge status", () => {
     expect.assertions(1);
     return queries.acceptChallenge(1, 1).then(res => {
-      // console.log(res);
       expect(res).toBeTruthy();
     })
   })
@@ -48,7 +46,6 @@ describe('get accepted challenges', () => {
   test('returns the accepted challenges of specific user', () => {
     expect.assertions(1);
     return queries.getAcceptedChallenges(1, 1).then(res => {
-      console.log(res);
       expect(res).toBeTruthy();
     })
   })
@@ -79,7 +76,6 @@ describe('complete a challenge', () => {
   test('change the challenge status to complete', () => {
     expect.assertions(1);
     return queries.completeChallenge(1, 1).then(res => {
-      // console.log(res);
       expect(res).toBeTruthy();
     })
   })
