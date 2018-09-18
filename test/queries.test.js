@@ -87,3 +87,12 @@ describe("buy an item", () => {
     });
   });
 });
+
+describe("Get single query", () => {
+  test("Check that a single challenge is returned", () => {
+    expect.assertions(1);
+    return queries.getSingleChallenge(1.1).then(res => {
+      expect(res).toBeTruthy();
+    });
+  });
+});
