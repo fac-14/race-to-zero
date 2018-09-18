@@ -1,0 +1,26 @@
+<h2>The user has selected a bought item to learn more</h2>
+
+<section class="bought-item-page">
+
+  {{!-- <img class="challenge-img" src="{{challenge.img_link}}"> --}}
+
+  <h2>{{{item.title}}}</h2>
+  <h2 class="h2-id">{{{item.id}}}</h2>
+
+  <article class="item-what">
+    <h3>What</h3>
+    <p>
+      {{{item.what}}}
+    </p>
+  </article>
+
+  <article class="item-why">
+    <h3>Why</h3>
+    <p>
+      {{{item.why}}}
+    </p>
+  </article>
+
+  <a href="{{{item.ext_link}}}" target="_blank" class="ext-link"><button>Find out more</button></a>
+
+</section>

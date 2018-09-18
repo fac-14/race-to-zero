@@ -1,1 +1,17 @@
-{{!-- hello again --}}
+{{!-- hello again --}} {{!-- this is the main layout for when you're logged in --}}
+
+<!DOCTYPE html>
+<html lang="en">
+{{> header}}
+
+<body>
+    {{> navbar}}
+
+    <main>
+        {{{body}}}
+    </main>
+    {{> footer}}
+    {{> scripts }}
+</body>
+
+</html>

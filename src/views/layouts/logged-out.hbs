@@ -1,1 +1,18 @@
-{{!-- hello --}}
+{{!-- hello again --}} {{!-- layout for when the user isn't logged in --}}
+
+<!DOCTYPE html>
+<html lang="en">
+{{> header}}
+
+<body>
+  {{> navbar}}
+
+  <main>
+    <h1>Logged-out layout!</h1>
+    {{{body}}}
+  </main>
+  {{> footer}}
+
+</body>
+
+</html>
