@@ -12,11 +12,12 @@ const suggestedItem = require("./suggested-item-select");
 const boughtItem = require("./bought-item-select");
 const learn = require("./learn");
 const userStats = require("./user-stats");
-const queries = require('../model/index')
-const singleTopic = require('./getSingleTopic');
+const queries = require("../model/index");
+const singleTopic = require("./getSingleTopic");
 const errorRoute = require("./error-route");
 const error = require("./error");
-const getUserPoints = require('./get-User-Points')
+// const getUserPoints = require("./get-User-Points");
+const test = require("./get-user-points");
 
 router.get("/", landing.get);
 // router.get("signup", signup.get);
@@ -38,7 +39,8 @@ router.get("/learn", learn.get);
 router.get("/stats", userStats.get);
 router.get("/learn/:singleTopic", singleTopic.get);
 
-
+// testing points route
+router.get("/test", test.get);
 
 // accepting and completing challenges
 router.post("/challenge/accepted/", (req, res) => {
@@ -50,7 +52,7 @@ router.post("/challenge/accepted/", (req, res) => {
 
 router.post("/challenge/completed/", (req, res) => {
   // insert query here to add completed challenge to database
-  queries.completeChallenge(req.body.challenge_id, 1)
+  queries.completeChallenge(req.body.challenge_id, 1);
   // console.log("Challenge completed!");
   res.redirect(302, "/dashboard");
   res.end();
