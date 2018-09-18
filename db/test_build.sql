@@ -82,6 +82,8 @@ CREATE TABLE challenge_status
     status INTEGER
 );
 
+ALTER TABLE challenge_status ADD CONSTRAINT chall_stat_unique UNIQUE (challenge_id, user_id, status);
+
 INSERT INTO challenge_status
     (challenge_id, user_id, status)
 VALUES
