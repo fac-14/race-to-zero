@@ -87,3 +87,13 @@ describe("buy an item", () => {
     });
   });
 });
+
+describe("Update points for single user", () => {
+  test("Check if we can get reward points for user 1", ()=>{
+    expect.assertions(1);
+    return queries.updatePoints(1,1).then(res =>{
+      console.log(res)
+      expect(res).toBeTruthy();
+    })
+  })
+})
