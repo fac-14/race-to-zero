@@ -13,7 +13,10 @@ const boughtItem = require("./bought-item-select");
 
 const learn = require("./learn");
 const userStats = require("./user-stats");
-const queries = require("../model/index");
+
+const queries = require('../model/index')
+const singleTopic = require('./getSingleTopic');
+
 
 const errorRoute = require("./error-route");
 const error = require("./error");
@@ -37,6 +40,9 @@ router.get("/inventory/bought-item/:id", boughtItem.get);
 router.get("/make-error", errorRoute);
 router.get("/learn", learn.get);
 router.get("/stats", userStats.get);
+router.get("/learn/:singleTopic", singleTopic.get);
+
+
 
 // accepting and completing challenges
 router.post("/challenge/accepted/", (req, res) => {
