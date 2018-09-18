@@ -16,7 +16,7 @@ const queries = require("../model/index");
 const singleTopic = require("./getSingleTopic");
 const errorRoute = require("./error-route");
 const error = require("./error");
-const getUserPoints = require("./get-user-points");
+const getUserPoints = require("./get-User-Points");
 
 router.get("/", landing.get);
 // router.get("signup", signup.get);
