@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "V-Gerb-Bold";
+  src: url("../../public/assets/fonts/V-GERB-BOLD.ttf") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+
+// Must be in capitals!
+$title-text: "V-Gerb-Bold";
+$main-text: "Dosis", sans-serif;
