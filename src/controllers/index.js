@@ -16,8 +16,7 @@ const queries = require("../model/index");
 const singleTopic = require("./getSingleTopic");
 const errorRoute = require("./error-route");
 const error = require("./error");
-// const getUserPoints = require("./get-User-Points");
-const test = require("./get-user-points");
+const getUserPoints = require("./get-user-points");
 
 router.get("/", landing.get);
 // router.get("signup", signup.get);
@@ -39,8 +38,8 @@ router.get("/learn", learn.get);
 router.get("/stats", userStats.get);
 router.get("/learn/:singleTopic", singleTopic.get);
 
-// testing points route
-router.get("/test", test.get);
+// Sending the points object
+router.get("/userpoints", getUserPoints.get);
 
 // accepting and completing challenges
 router.post("/challenge/accepted/", (req, res) => {

@@ -6,8 +6,6 @@ exports.get = (req, res) => {
 
   Promise.all([getBoughtItems, getSuggestedItems])
     .then(items => {
-      console.log("totalItems", items);
-
       res.render("inventory", {
         boughtItems: items[0],
         suggestedItems: items[1]

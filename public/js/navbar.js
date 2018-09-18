@@ -4,7 +4,7 @@ function render(number) {
     getPoints.innerHTML = number
 }
 
-fetch("http://localhost:3000/test/")
+fetch("http://localhost:3000/userpoints/")
     .then(function (res) {
         return res.json();
     }).then(function (myjson) {
