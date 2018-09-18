@@ -142,6 +142,11 @@ table {
   box-sizing: border-box;
 }
 
+main {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 body {
   font: 100% "Dosis", sans-serif;
   font-size: medium;
