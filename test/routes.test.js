@@ -61,7 +61,7 @@ describe("Test the learn page", () => {
 describe("Test the accepted challenge page", () => {
   test("Expecting a 200 status return", done => {
     supertest(app)
-      .get("/my-challenge/")
+      .get("/acc-challenges/1")
       .then(response => {
         expect(response.statusCode).toBe(200);
         done();
@@ -80,10 +80,21 @@ describe("Test the stats page", () => {
   });
 });
 
-describe("Test the inventory item page", () => {
+describe("Test the bought inventory item page", () => {
   test("Expecting a 200 status return", done => {
     supertest(app)
-      .get("/inventory-item/")
+      .get("/inventory/suggested-item/1")
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
+
+describe("Test the suggested inventory item page", () => {
+  test("Expecting a 200 status return", done => {
+    supertest(app)
+      .get("/inventory/bought-item/1")
       .then(response => {
         expect(response.statusCode).toBe(200);
         done();

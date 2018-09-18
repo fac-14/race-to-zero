@@ -1,8 +1,36 @@
-<h2>This is where the user can view suggested zero waste items to buy</h2>
+<h2>Items you own</h2>
 
-<ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-</ul>
+{{!-- <h2>{{{boughtItems.title}}}</h2> --}}
+
+<section class="items-container">
+    <header class="items-header">
+        <h1 class="main-title">Bought Items</h1>
+    </header>
+    <div class="items-container">
+        {{#each boughtItems}}
+        <div class="items-overview">
+            {{!-- <img src='{{this.img_link}}'> --}}
+            <h3 class="newItemH3">{{this.title}} : {{this.id}}</h3>
+            <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/inventory/bought-item/{{this.id}}'">
+                Find out more
+            </button>
+            {{/each}}
+        </div>
+</section>
+
+
+<section class="items-container">
+    <header class="items-header">
+        <h1 class="main-title">Suggested Items</h1>
+    </header>
+    <div class="items-container">
+        {{#each suggestedItems}}
+        <div class="items-overview">
+            {{!-- <img src='{{this.img_link}}'> --}}
+            <h3 class="newItemH3">{{this.title}} : {{this.id}}</h3>
+            <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/inventory/suggested-item/{{this.id}}'">
+                Find out more
+            </button>
+            {{/each}}
+        </div>
+</section>
