@@ -1,9 +1,131 @@
 @import "colors";
-
-// Fonts
-$font-stack: Helvetica, sans-serif;
+@import "fonts";
+@import "sizes";
+@import "reset";
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+  font: 100% $main-text;
+  font-size: medium;
+  color: $black;
+  background-color: $white;
+  padding: $small;
+}
+
+h1 {
+  font: 100% $title-text;
+  font-size: $larger;
+  margin-bottom: $medium;
+}
+
+h2 {
+  font-size: $large;
+  font-weight: 600;
+  margin-bottom: $medium;
+  margin-top: $medium;
+}
+
+h3 {
+  font-size: $font-h3;
+  font-weight: 600;
+  margin-bottom: $medium;
+}
+
+p {
+  margin-bottom: $small;
+}
+
+// colours
+
+.colors {
+  width: 100%;
+  margin-bottom: $large;
+}
+
+.colors > li {
+  padding: $small;
+  border: $smallest $black solid;
+}
+
+.colors > li:nth-child(1) {
+  background: $green1;
+  color: $white;
+}
+
+.colors > li:nth-child(2) {
+  background: $green1;
+  color: $black;
+}
+
+.colors > li:nth-child(3) {
+  background: $navy1;
+  color: $white;
+}
+
+.colors > li:nth-child(4) {
+  background: $orange1;
+  color: $black;
+}
+
+.colors > li:nth-child(5) {
+  background: $white;
+  color: $black;
+}
+
+.colors > li:nth-child(6) {
+  background: $black;
+  color: $white;
+}
+
+// sizes
+
+.sizes {
+  width: 100%;
+  margin-bottom: $large;
+}
+
+.sizes > li {
+  padding: $small;
+  border: $smallest $black solid;
+}
+
+.sizes > li:nth-child(1) {
+  height: $smallest;
+  font-size: $smallest;
+  padding: $smallest;
+}
+
+.sizes > li:nth-child(2) {
+  height: $small;
+  font-size: $small;
+  padding: $small;
+}
+
+.sizes > li:nth-child(3) {
+  height: $medium;
+  font-size: $medium;
+  padding: $medium;
+}
+
+.sizes > li:nth-child(4) {
+  height: $font-h3;
+  font-size: $font-h3;
+  padding: $font-h3;
+}
+
+.sizes > li:nth-child(5) {
+  height: $large;
+  font-size: $large;
+  padding: $large;
+}
+
+.sizes > li:nth-child(6) {
+  height: $larger;
+  font-size: $larger;
+  padding: $larger;
+}
+
+.sizes > li:nth-child(7) {
+  height: $godzilla;
+  font-size: $godzilla;
+  padding: $godzilla;
 }
