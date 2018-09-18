@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+@font-face {
+  font-family: "V-Gerb-Bold";
+  src: url("../../public/assets/fonts/V-GERB-BOLD.ttf") format("truetype");
+}
+#foot-navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #404973;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+}
+
+#foot-navbar > a {
+  color: #fbf6f1;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=footer.css.map */

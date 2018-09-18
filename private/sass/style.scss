@@ -3,6 +3,15 @@
 @import "sizes";
 @import "reset";
 
+*{
+  box-sizing: border-box;
+}
+
+main{
+  margin-top: $large;
+  margin-bottom: $large;
+}
+
 body {
   font: 100% $main-text;
   font-size: medium;
