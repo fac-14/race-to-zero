@@ -1,24 +1,36 @@
-<h2>This is home dashboard where user can see their challenges</h2>
+ {{!-- <body onload="document.getElementById('defaultOpen').click()"> --}}
+ <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'new-challenge')" id="defaultOpen">New Challenges</button>
+  <button class="tablinks" onclick="openCity(event, 'accepted-challenge')">Accepted Challenges</button>
+  <button class="tablinks" onclick="openCity(event, 'completed-challenge')">Completed Challenges</button>
+</div>
+ 
+ 
 
-<section class="challenges-container">
+ <!-- New Challenges -->
+<section id="new-challenge" class="challenges-container tabcontent">
     <header class="challenges-header">
-        <h1 class="main-title">New Challenges</h1>
+        <h2 class="main-title">New Challenges</h2>
     </header>
     <div class="challenges-container">
         {{#each newChallenges}}
         <div class="challenge-overview">
             {{!-- <img src='{{this.img_link}}'> --}}
             <h3 class="newChallH3">{{this.title}} : {{this.id}}</h3>
+            <p>Reward Points: {{this.reward_points}}</p>
             <button class="new-challenge-button" id="{{this.id}}" onclick="window.location.href='/new-challenges/{{this.id}}'">
                 Find out more
             </button>
-            {{/each}}
         </div>
+        {{/each}}
+
 </section>
 
-<section class="challenges-container">
+<!-- Accepted Challenges -->
+
+<section id="accepted-challenge" class="challenges-container tabcontent">
     <header class="challenges-header">
-        <h1 class="main-title">Accepted Challenges</h1>
+        <h2 class="main-title">Accepted Challenges</h2>
     </header>
     <div class="challenges-container">
         {{#each acceptedChallenges}}
@@ -26,18 +38,23 @@
             {{!-- <img src='{{this.img_link}}'>
             --}}
             <h3>{{this.title}} : {{ this.challenge_id }}</h3>
+            <p>Reward Points: {{this.reward_points}}</p>
             <button class="acc-challenge-button" id="{{this.id}}" onclick="window.location.href='/acc-challenges/{{this.challenge_id}}'">
                 Find out more </button> {{/each}}
         </div>
 </section>
-<section class="challenges-container">
+
+<!-- Accepted challenge -->
+
+<section id="completed-challenge" class="challenges-container tabcontent">
     <header class="challenges-header">
-        <h1 class="main-title">Completed Challenges</h1>
+        <h2 class="main-title">Completed Challenges</h2>
     </header>
     <div class="challenges-container">
         {{#each completedChallenges}}
         <div class="challenge-overview">
             <h3>{{this.title}} : {{ this.challenge_id }}</h3>
+            <p>Reward Points: {{this.reward_points}}</p>
             <button class="challenge-button" id="id-{{this.id}}" onclick="window.location.href='/comp-challenges/{{this.challenge_id}}'">
                 Find out more
             </button>
