@@ -8,7 +8,7 @@ exports.get = (req, res) => {
 
   Promise.all([newChallenges, acceptedChallenges, completedChallenges])
     .then(challenges => {
-      console.log(challenges[2]);
+      // console.log(challenges[2]);
 
       res.render("dashboard", {
         newChallenges: challenges[0],
