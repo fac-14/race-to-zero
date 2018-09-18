@@ -1,10 +1,10 @@
 const queries = require("../model");
 
-exports.get = (req, res) =>{
+const getPoints = () =>{
   queries.getUserPoints(1).then(points => {
     console.log(points)  
-    res.render('main', {
-          user_points: points
-      })
+   
   })
 }
+
+module.exports = getPoints;
