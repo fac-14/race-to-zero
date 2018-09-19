@@ -4,34 +4,33 @@
   src: url("../../public/assets/fonts/V-GERB-BOLD.ttf") format("truetype");
 }
 .items-container {
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .items-overview {
   display: flex;
   flex-direction: row;
-  margin: 0;
-}
-
-.newItemH3 {
+  align-items: center;
+  justify-content: space-around;
   margin: 0;
 }
 
 .bought-icon,
 .suggested-icon {
-  width: 25%;
-  display: inline-block;
+  width: 3rem;
   margin: 0;
+  height: 3rem;
 }
 
-.help-icon {
-  display: block;
-  margin: auto;
+.bought-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .new-item-button {
   display: block;
-  width: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
   border: none;
   padding: 0;
   margin: 0;
@@ -39,9 +38,13 @@
   cursor: pointer;
 }
 
-.bought-container {
-  display: flex;
-  flex-direction: column;
+.newItemH3 {
+  margin: 0;
+}
+
+.help-icon {
+  display: block;
+  margin: auto;
 }
 
 .suggested-container {
