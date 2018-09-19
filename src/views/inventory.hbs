@@ -1,32 +1,38 @@
 <section class="items-container">
-    <header class="items-header">
+    
         <h2 class="main-title">Bought Items</h2>
-    </header>
-    <div class="items-container">
+    
+    <div class="bought-container">
         {{#each boughtItems}}
         <div class="items-overview">
-            {{!-- <img src='{{this.img_link}}'> --}}
-            <h3 class="newItemH3">{{this.title}} : {{this.id}}</h3>
+            <h3 class="newItemH3">{{this.title}}</h3>
+            <img class="bought-icon" src='{{this.img_link}}'>
             <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/inventory/bought-item/{{this.id}}'">
-                Find out more
+                 <img class="help-icon" src="../../public/imgs/help.svg" alt="">
             </button>
+          </div> 
             {{/each}}
-        </div>
+        
+
 </section>
 
 
 <section class="items-container">
-    <header class="items-header">
+   
         <h2 class="main-title">Suggested Items</h2>
-    </header>
-    <div class="items-container">
+  
+    <div class="suggested-container">
         {{#each suggestedItems}}
         <div class="items-overview">
-            {{!-- <img src='{{this.img_link}}'> --}}
-            <h3 class="newItemH3">{{this.title}} : {{this.id}}</h3>
-            <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/inventory/suggested-item/{{this.id}}'">
-                Find out more
+            <h3 class="newItemH3">{{this.title}}</h3>
+            <div class="icons">
+            <img class="suggested-icon" src='{{this.img_link}}'>
+                      <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/inventory/suggested-item/{{this.id}}'">
+                <img class="help-icon" src="../../public/imgs/help.svg" alt="">
             </button>
+            </div>
+            </div>
             {{/each}}
-        </div>
+       
+        
 </section>
