@@ -18,6 +18,7 @@ nav{
   border-bottom-left-radius: 10px;
 }
 
+// XP and XP-BAR STYLING
 #xp-section{
 display:flex;
 align-items:center;
@@ -53,17 +54,7 @@ appearance: none;
   border-radius: 2px;
 }
 
-#avatar-section{
-  position: fixed;
-  right: 0;
-  top: $large;
-}
-#profile-pic{
-  height: 4rem;
-  border: $navy1 $small solid;
-  border-radius: 100%;
-  margin-right: $smallest;
-}
+// LEVEL TEXT STYLING
 nav > h4{
   font-size: $medium;
   margin: 0;
@@ -73,6 +64,41 @@ nav > h4{
   margin-right: $small;
 }
 
+// AVATAR-PIC and BUTTON STYLING 
+#avatar-section{
+  position: fixed;
+  right: 0;
+  top: $large;
+}
+#profile-pic{
+  height: 4rem;
+  border: $navy1 $small solid;
+  border-radius: 100%;
+}
+.menu-button {
+  display: inline-block;
+  height: 3.9rem;
+  border: none;
+  padding: 0;
+  margin: $smallest $smallest 0 0;
+  border-radius: 50%;
+  background: $navy1;
+  cursor: pointer;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.menu-button:hover,
+.menu-button:focus {
+  box-shadow: 0 0 20px $green1;
+}
+.menu-button:active {
+  transform: scale(0.99);
+  box-shadow: 0 0 20px $orange1;
+}
+
+// DROPDOWN MENU STYLING
 .popout-menu {
   position: absolute;
   top: 0;
