@@ -1,9 +1,12 @@
 <section class="challenge-page">
 
-  {{!-- <img class="challenge-img" src="{{challenge.img_link}}"> --}}
+  <header class="header-img">
+    <img class="selected-item-img" src="{{challenge.img_link}}">
+  </header>
 
-  <h2>{{{challenge.title}}}</h2>
-  <h2 class="h2-id">{{{challenge.id}}}</h2>
+  <h2 class="selected-item-title">{{{challenge.title}}}</h2>
+  <h2 class="accept-challenge-section id-hidden">{{{challenge.id}}}</h2>
+
 
   <article class="challenge-what">
     <h3>What</h3>
@@ -19,8 +22,8 @@
     </p>
   </article>
 
-  <a href="{{{challenge.ext_link}}}" target="_blank" class="ext-link"><button>Find out more</button></a>
-
+  <a href="{{{challenge.ext_link}}}" target="_blank" class="ext-link"><button class="single-page-button">Find
+      out more</button></a>
 
 
 </section>
