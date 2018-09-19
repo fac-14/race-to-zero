@@ -1,7 +1,24 @@
+
 var getPoints = document.querySelector(".getPoints");
+var xpBar = document.querySelector("#xp-bar");
+
+
+(() => {
+    const menuBtn = document.querySelector('.menu-button');
+    const popoutMenu = document.querySelector('.popout-menu');
+    menuBtn.addEventListener('click', () =>
+        toggleMenu(popoutMenu, menuBtn)
+    );
+})();
+
+function toggleMenu(menu, button) {
+    // button.classList.toggle('app_drawer__button--visible');
+    menu.classList.toggle('popout-menu--visible');
+}
 
 function render(number) {
-    getPoints.innerHTML = number
+    getPoints.innerHTML = (number + "/50");
+    xpBar.setAttribute("value", number);
 }
 
 fetch("http://localhost:3000/userpoints/")
@@ -10,5 +27,7 @@ fetch("http://localhost:3000/userpoints/")
     }).then(function (myjson) {
         render(myjson.user_points.points);
     })
+
+
 
 
