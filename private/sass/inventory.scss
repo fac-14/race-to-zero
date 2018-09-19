@@ -11,16 +11,15 @@ margin: $medium;
 display:flex;
 flex-direction: row;
 align-items: center;
-justify-content: space-around;
+justify-content: space-between;
 margin: 0;
-
 }
 
 .bought-icon,
 .suggested-icon{
     width: 3rem;
 //   display: inline-block;
-  margin: 0;
+  margin: $smallest;
   height: 3rem;
 }
 
@@ -36,7 +35,7 @@ margin: 0;
     min-width: 2rem;
     border: none;
     padding: 0;
-    margin: 0;
+    margin: $smallest;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -45,12 +44,16 @@ margin: 0;
     margin: 0;
 }
 
-
+.icons{
+    display: flex;
+    align-items: center;
+}
 
 .help-icon {
     // width: 15%;
     display: block;
     margin: auto;  
+    
 }
 
 
