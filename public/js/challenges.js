@@ -17,6 +17,7 @@ let h3id = document.querySelector(".accept-challenge-section");
     s.setAttribute("value", "Yes I am! Accept that Challenge!!");
     id.setAttribute("name", "challenge_id");
     id.setAttribute("type", "hidden");
+    id.classList.add("id-hidden");
     id.setAttribute("value", h3id.innerHTML);
     h3.innerHTML = "Are you brave enough to accept this challenge?";
     f.appendChild(h3);
