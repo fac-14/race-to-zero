@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+@font-face {
+  font-family: "V-Gerb-Bold";
+  src: url("../../public/assets/fonts/V-GERB-BOLD.ttf") format("truetype");
+}
+.items-container {
+  margin: 2rem;
+}
+
+/*# sourceMappingURL=inventory.css.map */
