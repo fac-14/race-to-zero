@@ -1,8 +1,6 @@
 /* eslint-disable */
 var getPointsEntry = document.querySelectorAll(".getPoints");
-var completedChallengesEntry = document.querySelectorAll(
-  ".completedChallenges"
-);
+var completedChallengesEntry = document.querySelectorAll(".completedChallenges");
 var pointsLeftEntry = document.querySelectorAll(".pointsLeft");
 var currentLevel = document.querySelectorAll(".myLevel");
 var xpBar = document.querySelector("#xp-bar");
@@ -21,7 +19,7 @@ var avatarPic = document.querySelector("#profile-pic");
 function toggleMenu(menu) {
   menu.classList.toggle("popout-menu--visible");
 }
-
+// render function to render user stats in navbar
 function render(challengesCompleted, pointsLeft, userPoints, myLevel) {
   getPointsEntry.forEach(function (points) {
     points.innerHTML = userPoints;
@@ -42,7 +40,7 @@ function render(challengesCompleted, pointsLeft, userPoints, myLevel) {
     }
   });
 }
-
+// 2 api request to get use specific stats and general user object
 var apiRequest1 = fetch("http://localhost:3000/send-stats/").then(function (
   response
 ) {
@@ -59,7 +57,7 @@ var combinedData = {
   apiRequest1: {},
   apiRequest2: {}
 };
-
+// get data from both urls, asign them to an object as values and return an array of objects
 Promise.all([apiRequest1, apiRequest2])
   .then(function (values) {
     combinedData['apiRequest1'] = values[0];
@@ -69,41 +67,13 @@ Promise.all([apiRequest1, apiRequest2])
   .then(function (combinedData) {
     var userStatsArr = combinedData[0];
     var generalStatsArr = combinedData[1];
-
     var challengesCompleted = userStatsArr.challengesCompleted;
     var pointsLeft = userStatsArr.pointsLeft;
     var userPoints = userStatsArr.userPoints;
     var myLevel = Math.floor(userPoints / 50);
+    // rendering starts here
+    // avatar and rank relates to user points / 10 as each challenge has 10 points
     rank.innerHTML = generalStatsArr[userPoints / 10].rank;
-    avatarPic.src = generalStatsArr[challengesCompleted].avater_url;
+    avatarPic.src = generalStatsArr[userPoints / 10].avater_url;
     render(challengesCompleted, pointsLeft, userPoints, myLevel);
-
   })
-
-
-// fetch("http://localhost:3000/send-stats/")
-//   .then(function (res) {
-//     return res.json();
-//   })
-//   .then(function (myjson) {
-//     var challengesCompleted = myjson.challengesCompleted;
-//     var pointsLeft = myjson.pointsLeft;
-//     var userPoints = myjson.userPoints;
-//     var myLevel = Math.floor(userPoints / 50);
-//     render(challengesCompleted, pointsLeft, userPoints, myLevel);
-
-//     // render(myjson.user_points.points);
-//   });
-
-
-// fetch("http://localhost:3000/rank/")
-//   .then(function (res) {
-//     return res.json();
-//   })
-//   .then(function (myjson) {
-//     var statsArr = myjson;
-//     pointsEarned = pointsDisp.innerHTML;
-//     // console.log(pointsEarned);
-//     rank.innerHTML = statsArr[5].rank;
-//     avatarPic.src = statsArr[5].avater_url;
-//   })
