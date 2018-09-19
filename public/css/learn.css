@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+@font-face {
+  font-family: "V-Gerb-Bold";
+  src: url("../../public/assets/fonts/V-GERB-BOLD.ttf") format("truetype");
+}
+/* Learn Section(s) */
+.learn-intro {
+  text-align: left;
+  margin: 2rem 2rem 1rem 2rem;
+}
+
+.learn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.25rem;
+}
+
+.holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  width: 30vmin;
+  height: 30vmin;
+  border-radius: 50%;
+  background: #00ba9f;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+}
+
+.learn-container * {
+  padding: 1%;
+  text-decoration: none;
+  font-size: 20px;
+  color: inherit;
+}
+
+.Clothing,
+.Food,
+.Electric,
+.Plastic,
+.Glass,
+.Paper {
+  width: 25%;
+  display: block;
+  margin: auto;
+}
+
+/*# sourceMappingURL=learn.css.map */
