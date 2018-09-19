@@ -2,7 +2,7 @@
 var getPoints = document.querySelector(".getPoints");
 var xpBar = document.querySelector("#xp-bar");
 
-
+// code for the dropdown menu
 (() => {
     const menuBtn = document.querySelector('.menu-button');
     const popoutMenu = document.querySelector('.popout-menu');
@@ -11,8 +11,7 @@ var xpBar = document.querySelector("#xp-bar");
     );
 })();
 
-function toggleMenu(menu, button) {
-    // button.classList.toggle('app_drawer__button--visible');
+function toggleMenu(menu) {
     menu.classList.toggle('popout-menu--visible');
 }
 
@@ -27,7 +26,3 @@ fetch("http://localhost:3000/userpoints/")
     }).then(function (myjson) {
         render(myjson.user_points.points);
     })
-
-
-
-
