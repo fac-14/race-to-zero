@@ -1,0 +1,48 @@
+@import "colors";
+@import "fonts";
+@import "sizes";
+
+/* Learn Section(s) */
+
+.learn-intro{
+  text-align: left;
+  margin: $large $large $medium $large ;
+}
+
+.learn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: $smallest;
+}
+
+.holder {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  width: 30vmin;
+  height: 30vmin;
+  border-radius: 50%;
+  background: $green1;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+}
+
+.learn-container * {
+  padding: 1%;
+  text-decoration: none;
+  font-size: 20px;
+  color: inherit;
+}
+
+.Clothing,
+.Food,
+.Electric,
+.Plastic,
+.Glass,
+.Paper {
+  width: 25%;
+  display: block;
+  margin: auto;
+}

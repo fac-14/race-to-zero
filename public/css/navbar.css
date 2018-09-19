@@ -55,6 +55,16 @@ nav {
   border-radius: 2px;
 }
 
+nav > h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.level {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 #avatar-section {
   position: fixed;
   right: 0;
@@ -65,17 +75,30 @@ nav {
   height: 4rem;
   border: #404973 0.5rem solid;
   border-radius: 100%;
-  margin-right: 0.25rem;
 }
 
-nav > h4 {
-  font-size: 1rem;
-  margin: 0;
+.menu-button {
+  display: inline-block;
+  height: 3.9rem;
+  border: none;
+  padding: 0;
+  margin: 0.25rem 0.25rem 0 0;
+  border-radius: 50%;
+  background: #404973;
+  cursor: pointer;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.level {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.menu-button:hover,
+.menu-button:focus {
+  box-shadow: 0 0 20px #00ba9f;
+}
+
+.menu-button:active {
+  transform: scale(0.99);
+  box-shadow: 0 0 20px #ff9b71;
 }
 
 .popout-menu {
