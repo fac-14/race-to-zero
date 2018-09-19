@@ -6,23 +6,27 @@ nav{
   position: fixed;
   top:0;
   right: 0;
-  min-width: 50%;
+  min-width: 70%;
   height: $large;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: $navy1;
   color: $white;
+  padding: $smallest;
   border-bottom-left-radius: 10px;
 }
 
-
 #xp-section{
 display:flex;
-align-items:center; 
+align-items:center;
+justify-content: space-around;
+min-width: 60%;
 }
 #xp-section > h3{
-  margin: $small;
-  margin-left: $medium;
+  margin: 0 $small;
+  font-weight: 500;
 }
 #xp-bar{
   margin: $small;
@@ -50,7 +54,9 @@ appearance: none;
 }
 
 #avatar-section{
- text-align: right;
+  position: fixed;
+  right: 0;
+  top: $large;
 }
 #profile-pic{
   height: 4rem;
@@ -58,8 +64,28 @@ appearance: none;
   border-radius: 100%;
   margin-right: $smallest;
 }
-#avatar-section > h4{
+nav > h4{
   font-size: $medium;
   margin: 0;
-  margin: $small;
+}
+.level{
+  margin-left: $small;
+  margin-right: $small;
+}
+
+.popout-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: $godzilla;
+  width: 100vw;
+  transform: translateY(-100%);
+  background-color: $navy1;
+  transition: all 0.5s ease-in;
+  box-shadow: 1px 0 3px grey;
+}
+
+.popout-menu--visible {
+  transform: translateY(0);
 }

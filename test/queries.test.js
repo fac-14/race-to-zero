@@ -92,11 +92,27 @@ describe("Update points for single user", () => {
   test("Check if we can get reward points for user 1", () => {
     expect.assertions(1);
     return queries.updatePoints(1, 1).then(res => {
-      console.log(res)
       expect(res).toBeTruthy();
-    })
-  })
-})
+    });
+  });
+});
+
+describe("Get a users points", () => {
+  test("Check if a number is returned", () => {
+    // expect.assertions(4);
+    return queries.getUserPoints(1).then(res => {
+      console.log(res);
+
+      expect(res).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            points: expect.any(Number)
+          })
+        ])
+      );
+    });
+  });
+});
 
 describe("Get single query", () => {
   test("Check that a single challenge is returned", () => {

@@ -129,7 +129,7 @@ describe("Test the error-route page", () => {
     supertest(app)
       .get("/make-error/")
       .then(response => {
-        console.log(response.statusCode);
+        // console.log(response.statusCode);
         expect(response.statusCode).toBe(500);
         done();
       });
@@ -150,9 +150,20 @@ describe("Test an incorrect route for 404", () => {
 describe("Test a single topic route", () => {
   test("Expecting a 200 status response", done => {
     supertest(app)
-      .get("/learn/plastic")
+      .get("/learn/Plastic")
       .then(response => {
         expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
+
+describe("Test user-points route", () => {
+  test("Don't know what to expect yet", done => {
+    supertest(app)
+      .get("/userpoints")
+      .then(response => {
+        expect(response.statusCode).toBe(301);
         done();
       });
   });

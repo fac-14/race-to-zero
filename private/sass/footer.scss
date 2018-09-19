@@ -9,11 +9,13 @@
   background-color: $navy1;
   position: fixed;
   bottom: 0;
-  width:100%;
+  min-width:70%;
   height: $large;
+  border-top-right-radius: 10px;
 }
 
 #foot-navbar > a {
   color: $white;
   text-decoration: none;
+  margin: 0 $font-h3;
 }

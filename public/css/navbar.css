@@ -7,23 +7,28 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
-  min-width: 50%;
+  min-width: 70%;
   height: 2rem;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #404973;
   color: #fbf6f1;
+  padding: 0.25rem;
   border-bottom-left-radius: 10px;
 }
 
 #xp-section {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  min-width: 60%;
 }
 
 #xp-section > h3 {
-  margin: 0.5rem;
-  margin-left: 1rem;
+  margin: 0 0.5rem;
+  font-weight: 500;
 }
 
 #xp-bar {
@@ -51,7 +56,9 @@ nav {
 }
 
 #avatar-section {
-  text-align: right;
+  position: fixed;
+  right: 0;
+  top: 2rem;
 }
 
 #profile-pic {
@@ -61,10 +68,31 @@ nav {
   margin-right: 0.25rem;
 }
 
-#avatar-section > h4 {
+nav > h4 {
   font-size: 1rem;
   margin: 0;
-  margin: 0.5rem;
+}
+
+.level {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.popout-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 8rem;
+  width: 100vw;
+  transform: translateY(-100%);
+  background-color: #404973;
+  transition: all 0.5s ease-in;
+  box-shadow: 1px 0 3px grey;
+}
+
+.popout-menu--visible {
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=navbar.css.map */
