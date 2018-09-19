@@ -3,6 +3,9 @@
 @import "sizes";
 @import "reset";
 
+// paste line below into terminal to keep css updating
+// sass --watch private/sass:public/css
+
 *{
   box-sizing: border-box;
 }

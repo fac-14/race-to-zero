@@ -10,13 +10,15 @@
   background-color: #404973;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  min-width: 70%;
   height: 2rem;
+  border-top-right-radius: 10px;
 }
 
 #foot-navbar > a {
   color: #fbf6f1;
   text-decoration: none;
+  margin: 0 1.5rem;
 }
 
 /*# sourceMappingURL=footer.css.map */
