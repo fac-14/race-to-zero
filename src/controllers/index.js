@@ -17,6 +17,7 @@ const singleTopic = require("./getSingleTopic");
 const errorRoute = require("./error-route");
 const error = require("./error");
 const sendStats = require("./sendStats");
+const sendRank = require("./sendRank");
 
 router.get("/", landing.get);
 // router.get("signup", signup.get);
@@ -40,6 +41,9 @@ router.get("/learn/:singleTopic", singleTopic.get);
 
 // Sending the points object
 router.get("/send-stats", sendStats.get);
+
+router.get("/rank", sendRank.get);
+
 
 // accepting and completing challenges
 router.post("/challenge/accepted/", (req, res) => {
