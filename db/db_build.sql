@@ -36,13 +36,13 @@ CREATE TABLE inventory
 INSERT INTO inventory
     (title, what, why, ext_link, img_link, reward_points, repeatable)
 VALUES
-    ('Refillable Waterbottle', 'great to bring with you daily', 'saving lots of plastic as no need to constantly buy new PET bottles', 'https://www.chillysbottles.com/product/bottle/500ml/29562241043/?gclid=CjwKCAjw8uLcBRACEiwAaL6MScdW_rv7TBMOeGYZUqg-xx1BKhz0ZC7I1DFGAfeA_0rD5jKlqSuQuhoCIPwQAvD_BwE', 'https://assets.chillysbottles.com/assestNew/_width160/Pastel-Green-500ml-Front.png?mtime=20180905125046', 8, TRUE),
-    ('Recycled loo roll', 'saves paper aka trees', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', 'https://cdn.shopify.com/s/files/1/1502/3454/products/WGAC_ProductPhotos_2018Packaging_TransparentBG_DLSingleRoll_large.png?v=1531168094', 3, FALSE),
-    ('handkerchief', 'eco friendly sneezin', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', 'https://cdn.shopify.com/s/files/1/1502/3454/products/WGAC_ProductPhotos_2018Packaging_TransparentBG_DLSingleRoll_large.png?v=1531168094', 3, FALSE),
-    ('dish towels', 'saves paper aka trees', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', 'https://cdn.shopify.com/s/files/1/1502/3454/products/WGAC_ProductPhotos_2018Packaging_TransparentBG_DLSingleRoll_large.png?v=1531168094', 3, FALSE),
-    ('tupperware', 'saves paper aka trees', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', 'https://cdn.shopify.com/s/files/1/1502/3454/products/WGAC_ProductPhotos_2018Packaging_TransparentBG_DLSingleRoll_large.png?v=1531168094', 3, FALSE),
-    ('reusable shopping bag', 'saves paper aka trees', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', 'https://cdn.shopify.com/s/files/1/1502/3454/products/WGAC_ProductPhotos_2018Packaging_TransparentBG_DLSingleRoll_large.png?v=1531168094', 3, FALSE),
-    ('recycable tooth brush', 'saves paper aka trees', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', 'https://cdn.shopify.com/s/files/1/1502/3454/products/WGAC_ProductPhotos_2018Packaging_TransparentBG_DLSingleRoll_large.png?v=1531168094', 3, FALSE);
+    ('Refillable Waterbottle', 'great to bring with you daily', 'saving lots of plastic as no need to constantly buy new PET bottles', 'https://www.chillysbottles.com/product/bottle/500ml/29562241043/?gclid=CjwKCAjw8uLcBRACEiwAaL6MScdW_rv7TBMOeGYZUqg-xx1BKhz0ZC7I1DFGAfeA_0rD5jKlqSuQuhoCIPwQAvD_BwE', '../../public/imgs/inventory-icons/water-bottle.svg', 8, TRUE),
+    ('Recycled loo roll', 'saves paper aka trees', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', '../../public/imgs/inventory-icons/toilet-paper.svg', 3, FALSE),
+    ('handkerchief', 'eco friendly sneezin', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', '../../public/imgs/inventory-icons/handkerchief.svg', 3, FALSE),
+    ('dish towels', 'saves paper aka trees', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', '../../public/imgs/inventory-icons/towel.svg', 3, FALSE),
+    ('tupperware', 'saves paper aka trees', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', '../../public/imgs/inventory-icons/tupperware.svg', 3, FALSE),
+    ('reusable shopping bag', 'saves paper aka trees', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', '../../public/imgs/inventory-icons/bag.svg', 3, FALSE),
+    ('recycable tooth brush', 'saves paper aka trees', 'great feeling', 'https://uk.whogivesacrap.org/products/recycled-3ply-toilet-paper', '../../public/imgs/inventory-icons/toothbrush.svg', 3, FALSE);
 
 
 CREATE TABLE challenges
