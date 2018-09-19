@@ -7,4 +7,30 @@
   margin: 2rem;
 }
 
+.item-overview {
+  display: flex;
+}
+
+.bought-icon,
+.suggested-icon {
+  width: 25%;
+  display: block;
+  margin: auto;
+}
+
+.help-icon {
+  display: block;
+  margin: auto;
+}
+
+.new-item-button {
+  display: block;
+  width: 2rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=inventory.css.map */

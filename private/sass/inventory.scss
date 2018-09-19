@@ -6,14 +6,35 @@
 margin: $large;
 }
 
-.item-header {
-
-}
 
 .item-overview{
-
+display:flex;
 }
 
 .newItemH3{
 
+}
+
+.bought-icon,
+.suggested-icon{
+    width: 25%;
+  display: block;
+  margin: auto;
+}
+
+.help-icon {
+    // width: 15%;
+    display: block;
+    margin: auto;  
+}
+
+.new-item-button{
+    // display: inline-block;
+    display:block;
+    width: 2rem;
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    cursor: pointer;
 }
