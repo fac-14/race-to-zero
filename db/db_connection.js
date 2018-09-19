@@ -17,26 +17,38 @@ if (!DB_URL) throw new Error("Environment vatialbe must be set");
 const params = url.parse(DB_URL);
 const [username, password] = params.auth.split(":");
 
-const testDB = {
-  host: "localhost",
-  port: "5432",
-  database: "test_race2",
-  user: "simon",
-  password: "pw123"
+const options = {
+  host: params.hostname,
+  port: params.port,
+  database: params.pathname.split('/')[1],
+  max: process.env.DB_MAX_CONNECTIONS || 2,
+  user: username,
+  password,
+  ssl: params.hostname !== 'localhost'
 };
 
-const localDB = {
-  host: "localhost",
-  port: 5432,
-  database: "race_zero",
-  user: "simon",
-  password: "pw123"
-};
+const db = pgp(options);
+
+// const testDB = {
+//   host: "localhost",
+//   port: "5432",
+//   database: "test_race2",
+//   user: "simon",
+//   password: "pw123"
+// };
+
+// const localDB = {
+//   host: "localhost",
+//   port: 5432,
+//   database: "race_zero",
+//   user: "simon",
+//   password: "pw123"
+// };
 
 
-const connection =
-  process.env.NODE_ENV === "test" ? testDB : localDB;
+// const connection =
+//   process.env.NODE_ENV === "test" ? testDB : localDB;
 
-const db = pgp(connection);
+// const db = pgp(connection);
 
 module.exports = db;
