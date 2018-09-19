@@ -74,7 +74,7 @@ Promise.all([apiRequest1, apiRequest2])
     var pointsLeft = userStatsArr.pointsLeft;
     var userPoints = userStatsArr.userPoints;
     var myLevel = Math.floor(userPoints / 50);
-    rank.innerHTML = generalStatsArr[challengesCompleted].rank;
+    rank.innerHTML = generalStatsArr[userPoints / 10].rank;
     avatarPic.src = generalStatsArr[challengesCompleted].avater_url;
     render(challengesCompleted, pointsLeft, userPoints, myLevel);
 
