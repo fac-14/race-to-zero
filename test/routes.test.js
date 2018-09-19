@@ -150,7 +150,7 @@ describe("Test an incorrect route for 404", () => {
 describe("Test a single topic route", () => {
   test("Expecting a 200 status response", done => {
     supertest(app)
-      .get("/learn/plastic")
+      .get("/learn/Plastic")
       .then(response => {
         expect(response.statusCode).toBe(200);
         done();
