@@ -16,7 +16,8 @@
       "!coverage/**",
       "!node_modules/**",
       "!**/index.js",
-      "!src/model/topics.js"
+      "!src/model/topics.js",
+      "!db/db_build.js"
     ]
   },
   "scripts": {
