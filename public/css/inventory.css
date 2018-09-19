@@ -7,15 +7,21 @@
   margin: 2rem;
 }
 
-.item-overview {
+.items-overview {
   display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.newItemH3 {
+  margin: 0;
 }
 
 .bought-icon,
 .suggested-icon {
   width: 25%;
-  display: block;
-  margin: auto;
+  display: inline-block;
+  margin: 0;
 }
 
 .help-icon {
@@ -31,6 +37,16 @@
   margin: 0;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.bought-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.suggested-container {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=inventory.css.map */

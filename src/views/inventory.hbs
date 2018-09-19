@@ -20,17 +20,15 @@
 <section class="items-container">
    
         <h2 class="main-title">Suggested Items</h2>
+  
     <div class="suggested-container">
         {{#each suggestedItems}}
         <div class="items-overview">
             <h3 class="newItemH3">{{this.title}}</h3>
- 
             <img class="suggested-icon" src='{{this.img_link}}'>
-           
                       <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/inventory/suggested-item/{{this.id}}'">
                 <img class="help-icon" src="../../public/imgs/help.svg" alt="">
             </button>
-            
             {{/each}}
         </div>
         
