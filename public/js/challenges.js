@@ -1,38 +1,40 @@
 let challengePage = document.querySelector(".challenge-page");
 let url = window.location.href.split("/")[3];
-let h2id = document.querySelector(".h2-id");
+let h3id = document.querySelector(".accept-challenge-section");
 
 (function checkUrlandCreateForm(url) {
   let f = document.createElement("form");
   let s = document.createElement("input"); //input element, Submit button
   let id = document.createElement("input");
-  let h2 = document.createElement("h2");
+  let h3 = document.createElement("h3");
 
   if (url === "new-challenges") {
     f.setAttribute("method", "post");
     f.setAttribute("action", "/challenge/accepted");
-    s.setAttribute("class", "acceptBtn");
+    f.classList.add("action-section");
+    s.classList.add("single-page-button", "acceptBtn");
     s.setAttribute("type", "submit");
-    s.setAttribute("value", "accept challenge");
+    s.setAttribute("value", "Yes I am! Accept that Challenge!!");
     id.setAttribute("name", "challenge_id");
     id.setAttribute("type", "hidden");
-    id.setAttribute("value", h2id.innerHTML);
-    h2.innerHTML = "Accept Challenge";
-    f.appendChild(h2);
+    id.setAttribute("value", h3id.innerHTML);
+    h3.innerHTML = "Are you brave enough to accept this challenge?";
+    f.appendChild(h3);
     f.appendChild(s);
     f.appendChild(id);
     challengePage.appendChild(f);
   } else if (url === "acc-challenges") {
     f.setAttribute("method", "post");
     f.setAttribute("action", "/challenge/completed");
-    s.setAttribute("class", "complBtn");
+    f.classList.add("action-section");
+    s.classList.add("single-page-button", "complBtn");
     s.setAttribute("type", "submit");
     s.setAttribute("value", "complete challenge");
     id.setAttribute("name", "challenge_id");
     id.setAttribute("type", "hidden");
-    id.setAttribute("value", h2id.innerHTML);
-    h2.innerHTML = "Complete Challenge";
-    f.appendChild(h2);
+    id.setAttribute("value", h3id.innerHTML);
+    h3.innerHTML = "Complete Challenge";
+    f.appendChild(h3);
     f.appendChild(s);
     f.appendChild(id);
     challengePage.appendChild(f);

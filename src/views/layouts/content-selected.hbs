@@ -4,13 +4,13 @@
 <html lang="en">
 {{> header}}
 
-<body>
-  {{> navbar}}
+<body class="selected-item-body">
 
-  <main>
+  <main class="selected-item-main">
+    <button name="close" id="close-button" onclick="goBack()"><img class="close-icon" src="../../../public/imgs/delete.svg"
+        alt="close-icon"></button>
     {{{body}}}
   </main>
-  {{> footer}}
   {{> scripts }}
 
 </body>
