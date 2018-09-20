@@ -20,7 +20,6 @@
         <!-- New Challenges -->
 
         <section id="new-challenge" class="items-container tabcontent">
-            <h2 class="main-title">New Challenges</h2>
             <div class="bought-container">
                 {{#each newChallenges}}
                 <div class="items-overview">
@@ -42,7 +41,6 @@
         <!-- Accepted Challenges -->
 
         <section id="accepted-challenge" class="items-container tabcontent">
-            <h2 class="main-title">Accepted Challenges</h2>
             <div class="challenges-container">
                 {{#each acceptedChallenges}}
                 <div class="items-overview">
@@ -62,19 +60,18 @@
 
         <!-- Completed challenge -->
 
-        <section id="completed-challenge" class="challenges-container tabcontent">
-            <header class="challenges-header">
-                <h2 class="main-title">Completed Challenges</h2>
-            </header>
+        <section id="completed-challenge" class="items-container tabcontent">
             <div class="challenges-container">
                 {{#each completedChallenges}}
-                <div class="challenge-overview">
-                    <h3>{{this.title}} : {{ this.challenge_id }}</h3>
-                    <p>Reward Points: {{this.reward_points}}</p>
-                    <button class="challenge-button" id="id-{{this.id}}" onclick="window.location.href='/comp-challenges/{{this.challenge_id}}'">
-                        Find out more
-                    </button>
-                    {{/each}}
+                <div class="items-overview">
+                    <h3 class="newChallH3">{{this.title}}</h3>
+                    <div class="icons">
+                        <img class="bought-icon" src='{{this.img_link}}'>
+                        <button class="new-item-button" id="id-{{this.id}}" onclick="window.location.href='/comp-challenges/{{this.challenge_id}}'">
+                            <img class="help-icon" src="../../public/imgs/help.svg" alt="">
+                        </button>
+                    </div>
+                    </div>
                 </div>
-
+                {{/each}}
         </section>

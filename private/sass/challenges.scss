@@ -8,14 +8,15 @@
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+    border-radius: 10px;
 }
-
 
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
     margin: 110px 1rem  0rem 1rem;
+    border-radius: 10px;
 }
 
 .tab button {
@@ -24,14 +25,22 @@
     cursor: pointer;
 }
 
-
 .tab button:hover {
     background-color: #ddd;
+    border-radius: 3px;
 }
 
-.tab li:active{
-background-color: yellow;
+.tab button:focus,
+ .tab button:active,
+//  .tab li:active
+{
+    background-color: $orange1;
+    color: $black;
+    border: none;
+    // padding: $smallest;
+    border-radius: 3px;
 }
+
 .tab nav {
     
 }
@@ -40,6 +49,7 @@ background-color: yellow;
     display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 
 }
 
