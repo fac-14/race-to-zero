@@ -1,6 +1,6 @@
 BEGIN;
 
-    DROP TABLE IF EXISTS boards, users, topics
+    DROP TABLE IF EXISTS users, inventory, inventory_status, challenges, challenge_status
     CASCADE;
 
 COMMIT;

@@ -1,4 +1,4 @@
-const queries = require("../model/index");
+const queries = require("../model");
 
 exports.get = (req, res) => {
     res.send(queries.statsObj);

@@ -17,7 +17,7 @@ const singleTopic = require("./getSingleTopic");
 const errorRoute = require("./error-route");
 const error = require("./error");
 const sendStats = require("./sendStats");
-const sendRank = require("./sendRank");
+const sendWholeStatsObject = require("./sendWholeStatsObject");
 
 router.get("/", landing.get);
 // router.get("signup", signup.get);
@@ -42,7 +42,7 @@ router.get("/learn/:singleTopic", singleTopic.get);
 // Sending the points object
 router.get("/send-stats", sendStats.get);
 
-router.get("/rank", sendRank.get);
+router.get("/total-stats-object", sendWholeStatsObject.get);
 
 
 // accepting and completing challenges
