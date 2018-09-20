@@ -16,6 +16,7 @@
   margin: 0;
   border-radius: $medium;
   padding: $medium;
+  box-shadow: -3px 3px $navy1;
 }
 
 #close-button {
@@ -32,6 +33,7 @@
   align-items: center;
   cursor: pointer;
   transition: transform 0.5s ease;
+  border: $white solid 2px;
 }
 
 .close-icon {

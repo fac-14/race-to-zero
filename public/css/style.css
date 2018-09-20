@@ -142,6 +142,10 @@ table {
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: solid #ff9b71 2px;
+}
+
 main {
   margin-top: 4rem;
   margin-bottom: 2rem;
@@ -175,6 +179,71 @@ h3 {
 
 p {
   margin-bottom: 0.5rem;
+}
+
+.logged-out-body {
+  background-image: linear-gradient(to right top, #00ba9f, #00a0aa, #0083a7, #1f6693, #404973);
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.logged-out-main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: 0;
+  padding-top: 4rem;
+}
+
+.landing-title {
+  text-align: center;
+  text-shadow: -4px 4px #00ba9f;
+  color: #fbf6f1;
+  margin-bottom: 2rem;
+}
+
+.intro {
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.landing-button {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  background-color: #ff9b71;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #fbf6f1;
+  border: 2px #fbf6f1 solid;
+}
+
+.start-button {
+  margin-bottom: 1rem;
+}
+
+.landing-button:focus {
+  color: #ff9b71;
+  background-color: #fbf6f1;
+}
+
+.landing-button:hover {
+  color: #ff9b71;
+  background-color: #fbf6f1;
+}
+
+.landing-button-text {
+  font-family: "Dosis", sans-serif;
+  margin: auto;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */

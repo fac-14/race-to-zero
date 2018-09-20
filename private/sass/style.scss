@@ -6,11 +6,15 @@
 // paste line below into terminal to keep css updating
 // sass --watch private/sass:public/css
 
-*{
+* {
   box-sizing: border-box;
 }
 
-main{
+*:focus {
+  outline: solid $orange1 2px;
+}
+
+main {
   margin-top: $larger;
   margin-bottom: $large;
 }
@@ -43,4 +47,71 @@ h3 {
 
 p {
   margin-bottom: $small;
+}
+
+// Landing page
+
+.logged-out-body {
+  background-image: $gradient1;
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.logged-out-main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: $large $medium $large $medium;
+  margin: 0;
+  padding-top: $larger;
+}
+
+.landing-title {
+  text-align: center;
+  text-shadow: -4px 4px $green1;
+  color: $white;
+  margin-bottom: $large;
+}
+
+.intro {
+  color: white;
+  margin-bottom: $large;
+  text-align: center;
+}
+
+.landing-button {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  background-color: $orange1;
+  justify-content: center;
+  align-items: center;
+  border-radius: $large;
+  padding: $small;
+  cursor: pointer;
+  color: $white;
+  border: 2px $white solid;
+}
+
+.start-button {
+  margin-bottom: $medium;
+}
+
+.landing-button:focus {
+  color: $orange1;
+  background-color: $white;
+}
+
+.landing-button:hover {
+  color: $orange1;
+  background-color: $white;
+}
+
+.landing-button-text {
+  font-family: $main-text;
+  margin: auto;
+  font-weight: 500;
 }

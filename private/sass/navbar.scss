@@ -2,9 +2,9 @@
 @import "fonts";
 @import "sizes";
 
-nav{
+.nav-main {
   position: fixed;
-  top:0;
+  top: 0;
   right: 0;
   min-width: 70%;
   height: $large;
@@ -19,23 +19,23 @@ nav{
 }
 
 // XP and XP-BAR STYLING
-#xp-section{
-display:flex;
-align-items:center;
-justify-content: space-around;
-min-width: 60%;
+#xp-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 60%;
 }
-#xp-section > h3{
+#xp-section > h3 {
   margin: 0 $small;
   font-weight: 500;
 }
-#xp-bar{
+#xp-bar {
   margin: $small;
 }
 #xp-bar[value] {
   /* Reset the default appearance */
--webkit-appearance: none;
-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 
   width: 25vw;
   height: $small;
@@ -47,30 +47,33 @@ appearance: none;
 }
 #xp-bar[value]::-webkit-progress-value {
   background-color: $green1;
-  background-image:
-	   -webkit-linear-gradient(-45deg, 
-	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
-	                           rgba(0,0, 0, .1) 66%, transparent 66%);
+  background-image: -webkit-linear-gradient(
+    -45deg,
+    transparent 33%,
+    rgba(0, 0, 0, 0.1) 33%,
+    rgba(0, 0, 0, 0.1) 66%,
+    transparent 66%
+  );
   border-radius: 2px;
 }
 
 // LEVEL TEXT STYLING
-nav > h4{
+nav > h4 {
   font-size: $medium;
   margin: 0;
 }
-.level{
+.level {
   margin-left: $small;
   margin-right: $small;
 }
 
-// AVATAR-PIC and BUTTON STYLING 
-#avatar-section{
+// AVATAR-PIC and BUTTON STYLING
+#avatar-section {
   position: fixed;
   right: 0;
   top: $large;
 }
-#profile-pic{
+#profile-pic {
   height: 4rem;
   border: $navy1 $small solid;
   border-radius: 100%;
@@ -84,8 +87,7 @@ nav > h4{
   border-radius: 50%;
   background: $navy1;
   cursor: pointer;
-  transition: background 250ms ease-in-out, 
-              transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -114,4 +116,36 @@ nav > h4{
 
 .popout-menu--visible {
   transform: translateY(0);
+}
+
+// logged out navbar styling
+
+.logged-out-nav {
+  position: fixed;
+  right: 0;
+  margin: $small;
+  height: $large;
+}
+
+.sign-in-button {
+  background-color: $green1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $medium;
+  color: $white;
+  cursor: pointer;
+  padding: $small $medium $small $medium;
+  border: none;
+}
+
+.sign-in-button:focus {
+  background-color: $orange1;
+}
+
+.sign-in-button-text {
+  text-align: center;
+  font-family: $main-text;
+  margin: auto;
+  font-weight: 500;
 }
