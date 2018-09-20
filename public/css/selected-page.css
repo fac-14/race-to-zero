@@ -17,6 +17,7 @@
   margin: 0;
   border-radius: 1rem;
   padding: 1rem;
+  box-shadow: -3px 3px #404973;
 }
 
 #close-button {
@@ -33,6 +34,7 @@
   align-items: center;
   cursor: pointer;
   transition: transform 0.5s ease;
+  border: #fbf6f1 solid 2px;
 }
 
 .close-icon {
