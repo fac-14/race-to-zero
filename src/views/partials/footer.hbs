@@ -1,6 +1,6 @@
 {{!-- think this is where footers and stuff go? --}} 
 <footer id="foot-navbar">
-    <a href="/learn">Learn</a>
-    <a href="/dashboard">Challenges</a>
-    <a href="/inventory">Inventory</a>
+    <a class="learn-link {{#if activePage.learn}}navbar__link--active{{/if}}" href="/learn">Learn</a>
+    <a class ="chall-link {{#if activePage.challenges}}navbar__link--active{{/if}}" href="/dashboard">Challenges</a>
+    <a class="inv-link {{#if activePage.inventory}}navbar__link--active{{/if}}" href="/inventory">Inventory</a>
 </footer>
