@@ -15,10 +15,18 @@
   border-top-right-radius: 10px;
 }
 
-#foot-navbar > a {
+.chall-link, .inv-link, .learn-link {
   color: #fbf6f1;
   text-decoration: none;
   margin: 0 1.5rem;
+}
+
+.navbar__link--active {
+  color: #404973;
+  font-weight: bold;
+  background-color: #00ba9f;
+  padding: 0.6rem 0.25rem;
+  border-radius: 10px 10px 0px 0px;
 }
 
 /*# sourceMappingURL=footer.css.map */

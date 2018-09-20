@@ -7,6 +7,7 @@ exports.get = (req, res) => {
   Promise.all([getBoughtItems, getSuggestedItems])
     .then(items => {
       res.render("inventory", {
+        activePage: { inventory: true },
         boughtItems: items[0],
         suggestedItems: items[1]
       });

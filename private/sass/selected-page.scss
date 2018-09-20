@@ -41,9 +41,10 @@
   padding: $small;
 }
 
-#close-button:hover {
+#close-button:hover, #close-button:focus{
   transform: scale(1.1, 1.1);
 }
+
 
 .single-page-button {
   cursor: pointer;
@@ -59,7 +60,7 @@
 }
 
 .challenge-page {
-  margin-bottom: $godzilla;
+  margin-bottom: $large;
 }
 
 .action-section {
