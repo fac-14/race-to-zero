@@ -1,12 +1,26 @@
 <section class="stats-section">
-    <img src="{{userStats.city_img_url}}" alt="city-image">
-    <p>Status: {{userStats.status}}</p>
-    <p>My Rank: {{userStats.rank}}</p>
-    <p>My Level: {{userStats.my_level}}</p>
-    <p>My Points: <span class="getPoints"></span> (Points to next Level: <span class="pointsLeft"></span>)</p>
-    <p>Completed Challenges: <span class="completedChallenges"></span></p>
-
-
-
+    <h2>My Progress</h2>
+    <h3 class="city-map">Map:</h3>
+    <img class="city-img" src="{{userStats.city_img_url}}" alt="city-image">
+    <div class="stats-info">
+        <h3>Status:</h3>
+        <p>{{userStats.status}}</p>
+    </div>
+    <div class="stats-info">
+        <h3>Rank:</h3>
+        <p>{{userStats.rank}}</p>
+    </div>
+    <div class="stats-info">
+        <h3>Level:</h3>
+        <p>{{userStats.my_level}}</p>
+    </div>
+    <div class="stats-info">
+        <h3>Points:</h3>
+        <p><span class="getPoints"></span> (Points to next Level: <span class="pointsLeft"></span>)</p>
+    </div>
+    <div class="stats-info">
+        <h3>Unique Completed Challenges:</h3>
+        <p><span class="completedChallenges"></span></p>
+    </div>
 
 </section>

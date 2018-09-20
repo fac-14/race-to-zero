@@ -14,8 +14,16 @@
   border-top-right-radius: 10px;
 }
 
-#foot-navbar > a {
+.chall-link, .inv-link, .learn-link{
   color: $white;
   text-decoration: none;
   margin: 0 $font-h3;
+}
+
+.navbar__link--active {
+  color: $navy1;
+  font-weight: bold;
+  background-color: $green1;
+  padding: 0.6rem 0.25rem;
+  border-radius: 10px 10px 0px 0px;
 }

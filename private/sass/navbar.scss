@@ -87,7 +87,7 @@ nav > h4 {
   border-radius: 50%;
   background: $navy1;
   cursor: pointer;
-  transition: background 250ms ease-in-out, transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 0.5s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -96,26 +96,54 @@ nav > h4 {
   box-shadow: 0 0 20px $green1;
 }
 .menu-button:active {
-  transform: scale(0.99);
+  transform: scale(0.99) rotate(180deg);
   box-shadow: 0 0 20px $orange1;
 }
 
 // DROPDOWN MENU STYLING
 .popout-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1;
   height: $godzilla;
-  width: 100vw;
-  transform: translateY(-100%);
-  background-color: $navy1;
+  transform: translate(100%, -100%);
+  background-color: $navy2;
   transition: all 0.5s ease-in;
   box-shadow: 1px 0 3px grey;
+  width: 100%;
+  border-bottom-left-radius: 10px;
 }
 
 .popout-menu--visible {
-  transform: translateY(0);
+  transform: translate(0, 0);
+}
+
+.nav-stats {
+  padding-top: 40px;
+  padding-left: $small;
+  color: $white;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.quick-stats-info {
+  margin-right: $medium;
+  margin-bottom: $small;
+}
+
+#stats-button {
+  cursor: pointer;
+  background-color: $orange1;
+  color: white;
+  font-family: $main-text;
+  border-radius: $small;
+  font-weight: 600;
+  font-size: $medium;
+  width: 50%;
 }
 
 // logged out navbar styling

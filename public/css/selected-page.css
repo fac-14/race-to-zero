@@ -42,7 +42,7 @@
   padding: 0.5rem;
 }
 
-#close-button:hover {
+#close-button:hover, #close-button:focus {
   transform: scale(1.1, 1.1);
 }
 
@@ -60,7 +60,7 @@
 }
 
 .challenge-page {
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
 }
 
 .action-section {
@@ -94,6 +94,46 @@
 
 .id-hidden {
   display: none;
+}
+
+.stats-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.city-map,
+.stats-section > h2 {
+  text-align: center;
+}
+
+.city-img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+
+.stats-section > h3 {
+  margin-bottom: 0;
+}
+
+.stats-section > p {
+  margin-bottom: 1rem;
+}
+
+.hide-nav {
+  display: none;
+}
+
+.stats-info {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 0;
+}
+
+.stats-info > h3 {
+  margin-right: 0.5rem;
 }
 
 /*# sourceMappingURL=selected-page.css.map */

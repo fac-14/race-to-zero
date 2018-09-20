@@ -41,9 +41,10 @@
   padding: $small;
 }
 
-#close-button:hover {
+#close-button:hover, #close-button:focus{
   transform: scale(1.1, 1.1);
 }
+
 
 .single-page-button {
   cursor: pointer;
@@ -59,7 +60,7 @@
 }
 
 .challenge-page {
-  margin-bottom: $godzilla;
+  margin-bottom: $large;
 }
 
 .action-section {
@@ -93,4 +94,45 @@
 
 .id-hidden {
   display: none;
+}
+
+// user stats page specifically
+
+.stats-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.city-map,
+.stats-section > h2 {
+  text-align: center;
+}
+.city-img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: $medium;
+}
+
+.stats-section > h3 {
+  margin-bottom: 0;
+}
+
+.stats-section > p {
+  margin-bottom: $medium;
+}
+
+.hide-nav {
+  display: none;
+}
+
+.stats-info {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 0;
+}
+
+.stats-info > h3 {
+  margin-right: $small;
 }
