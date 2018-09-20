@@ -4,9 +4,12 @@ const initialiseTestDatabase = require("../db/test_build");
 const clearTestDatabase = require("../db/test_clear");
 const queries = require("../src/model/index");
 const challengeObject = require("./queries-dummy-data");
+beforeEach(() => clearTestDatabase());
 
 beforeEach(() => initialiseTestDatabase());
-afterEach(() => clearTestDatabase());
+
+// afterEach(() => clearTestDatabase());
+
 afterAll(() => db.$pool.end());
 
 describe("getting all challenges", () => {
@@ -101,8 +104,6 @@ describe("Get a users points", () => {
   test("Check if a number is returned", () => {
     // expect.assertions(4);
     return queries.getUserPoints(1).then(res => {
-      console.log(res);
-
       expect(res).toEqual(
         expect.arrayContaining([
           expect.objectContaining({

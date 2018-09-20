@@ -69,18 +69,17 @@ describe("Test the accepted challenge page", () => {
   });
 });
 
-// describe("Test the stats page", () => {
-//   test("Expecting a 200 status return", done => {
-//     supertest(app)
-//       .get("/stats/")
-//       .then(response => {
-//         console.log(response.statusCode);
+describe("Test the stats page", () => {
+  test("Expecting a 200 status return", done => {
+    supertest(app)
+      .get("/stats/")
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
 
-//         expect(response.statusCode).toBe(200);
-//         done();
-//       });
-//   });
-// });
 
 describe("Test the bought inventory item page", () => {
   test("Expecting a 200 status return", done => {
@@ -114,24 +113,13 @@ describe("Test challenge accepted", () => {
       });
   });
 });
-// We will come back to that
-// describe("Test challenge completed", () => {
-//   test("Expecting a 302 status return", done => {
-//     supertest(app)
-//       .post("/challenge/completed/")
-//       .then(response => {
-//         expect(response.statusCode).toBe(302);
-//         done();
-//       });
-//   });
-// });
+
 
 describe("Test the error-route page", () => {
   test("Expecting a 500 status return", done => {
     supertest(app)
       .get("/make-error/")
       .then(response => {
-        // console.log(response.statusCode);
         expect(response.statusCode).toBe(500);
         done();
       });
@@ -170,3 +158,38 @@ describe("Test user-points route", () => {
       });
   });
 });
+
+describe("Test the send user stats page", () => {
+  test("Expecting a 200 status return", done => {
+    supertest(app)
+      .get("/send-stats/")
+      .then(response => {
+        console.log(response.statusCode);
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
+
+describe("Test the send total stats page", () => {
+  test("Expecting a 200 status return", done => {
+    supertest(app)
+      .get("/total-stats-object/")
+      .then(response => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+  });
+});
+
+describe("Test challenge completed", () => {
+  test("Expecting a 302 status return", done => {
+    supertest(app)
+      .post("/challenge/completed/")
+      .then(response => {
+        expect(response.statusCode).toBe(302);
+        done();
+      });
+  });
+});
+

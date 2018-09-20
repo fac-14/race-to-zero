@@ -47,7 +47,7 @@ var apiRequest1 = fetch("/send-stats/").then(function (
   return response.json();
 });
 
-var apiRequest2 = fetch("/rank/").then(function (
+var apiRequest2 = fetch("/total-stats-object/").then(function (
   response
 ) {
   return response.json();
