@@ -1,11 +1,13 @@
-<h2>The user has selected an inventory item to learn more</h2>
+{{!-- <h2>The user has selected an inventory item to learn more</h2> --}}
+{{!-- <h2 class="h2-id">{{{item.id}}}</h2> --}}
 
 <section class="suggested-item-page">
 
   {{!-- <img class="challenge-img" src="{{challenge.img_link}}"> --}}
+  <img class="bought-icon" id="learn-more-icon" src='{{item.img_link}}'>
+  <h2 class="selected-item-title">{{{item.title}}}</h2>
 
-  <h2>{{{item.title}}}</h2>
-  <h2 class="h2-id">{{{item.id}}}</h2>
+
 
   <article class="item-what">
     <h3>What</h3>
@@ -21,13 +23,11 @@
     </p>
   </article>
 
-  <a href="{{{item.ext_link}}}" target="_blank" class="ext-link"><button>Find out more</button></a>
-
-  Have you bought it? Select below to earn bare points!
+  <a href="{{{item.ext_link}}}" target="_blank" class="ext-link"><button class="single-page-button">Find out more</button></a>
 
   <form action="/inventory/item-bought" method="post">
     <input name="item_id" type="hidden" value="{{item.id}}">
-    <button type="submit" value="bought item">I have bought this item!</button></a>
+    <button type="submit" value="bought item" class="single-page-button">I have bought this item!</button></a>
   </form>
 
 

@@ -52,6 +52,12 @@
   margin: auto;
 }
 
+#learn-more-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .suggested-container {
   display: flex;
   flex-direction: column;
