@@ -246,4 +246,37 @@ p {
   font-weight: 500;
 }
 
+.intro-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.intro-image {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 3px 3px #00ba9f;
+  background-color: #fbf6f1;
+}
+
+.intro-char {
+  width: 70px;
+}
+
+.intro-content {
+  display: flex;
+  height: 170px;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: #fbf6f1;
+  border-radius: 1rem;
+  box-shadow: 3px 3px #00ba9f;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */

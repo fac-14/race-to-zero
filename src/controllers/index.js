@@ -18,6 +18,7 @@ const errorRoute = require("./error-route");
 const error = require("./error");
 const sendStats = require("./sendStats");
 const sendWholeStatsObject = require("./sendWholeStatsObject");
+const intro = require("./intro");
 
 router.get("/", landing.get);
 // router.get("signup", signup.get);
@@ -44,7 +45,6 @@ router.get("/send-stats", sendStats.get);
 
 router.get("/total-stats-object", sendWholeStatsObject.get);
 
-
 // accepting and completing challenges
 router.post("/challenge/accepted/", (req, res) => {
   // insert query here to add accepted challenge to database
@@ -68,6 +68,9 @@ router.post("/inventory/item-bought/", (req, res) => {
   res.redirect(302, "/inventory");
   res.end();
 });
+
+// introduction
+router.get("/intro", intro.get);
 
 if (process.env.NODE_ENV === "test") {
   router.get("/make-error", errorRoute);
