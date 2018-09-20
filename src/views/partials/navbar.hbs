@@ -12,8 +12,21 @@
         </div>
     </nav>
     <menu class="popout-menu">
-        <h4>Current Level: <span class="myLevel"></span></h4>
-        <h4>Points to Next Level: <span class="pointsLeft"></span></h4>
-        <button name="View-Stats" id="stats-button" onclick="window.location.href='/stats/'">View My Stats</button>
+        {{!-- <div id="xp-section">
+            <h4>Earned Points: <span id="pointsDisp" class="getPoints"></span></h4>
+            <progress max="50" value="40" id="xp-bar"></progress>
+        </div>
+        <h4 class="level"></h4>
+        <div id="avatar-section">
+        </div> --}}
+        <div class="nav-stats">
+            <div class="quick-stats-info">
+                <h4>Current Level: <span class="myLevel"></span></h4>
+                <h4>Points to Next Level: <span class="pointsLeft"></span></h4>
+            </div>
+            <button name="View-Stats" id="stats-button" onclick="window.location.href='/stats/'">
+                View My Stats
+            </button>
+        </div>
     </menu>
 </header>
