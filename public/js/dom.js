@@ -32,7 +32,7 @@ function goBack() {
 
    document.addEventListener('DOMContentLoaded', () => {
     const contentChecker = document.querySelector('#challenge-content')
-    // const
+    const
     if (contentChecker) {
     console.log(contentChecker)
     }
