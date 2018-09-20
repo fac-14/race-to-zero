@@ -1,13 +1,14 @@
 /* eslint-disable */
 var getPointsEntry = document.querySelectorAll(".getPoints");
-var completedChallengesEntry = document.querySelectorAll(".completedChallenges");
+var completedChallengesEntry = document.querySelectorAll(
+  ".completedChallenges"
+);
 var pointsLeftEntry = document.querySelectorAll(".pointsLeft");
 var currentLevel = document.querySelectorAll(".myLevel");
 var xpBar = document.querySelector("#xp-bar");
 var pointsDisp = document.querySelector("#pointsDisp");
 var rank = document.querySelector(".level");
 var avatarPic = document.querySelector("#profile-pic");
-
 
 // code for the dropdown menu
 (() => {
@@ -21,18 +22,18 @@ function toggleMenu(menu) {
 }
 // render function to render user stats in navbar
 function render(challengesCompleted, pointsLeft, userPoints, myLevel) {
-  getPointsEntry.forEach(function (points) {
+  getPointsEntry.forEach(function(points) {
     points.innerHTML = userPoints;
   });
   xpBar.setAttribute("value", userPoints);
-  completedChallengesEntry.forEach(function (challenges) {
+  completedChallengesEntry.forEach(function(challenges) {
     challenges.innerHTML = challengesCompleted;
   });
-  pointsLeftEntry.forEach(function (remainingPoints) {
+  pointsLeftEntry.forEach(function(remainingPoints) {
     remainingPoints.innerHTML = pointsLeft;
   });
 
-  currentLevel.forEach(function (level) {
+  currentLevel.forEach(function(level) {
     if (myLevel > 0) {
       level.innerHTML = myLevel;
     } else {
@@ -41,15 +42,13 @@ function render(challengesCompleted, pointsLeft, userPoints, myLevel) {
   });
 }
 // 2 api request to get use specific stats and general user object
-var apiRequest1 = fetch("http://localhost:3000/send-stats/").then(function (
+var apiRequest1 = fetch("http://localhost:3000/send-stats/").then(function(
   response
 ) {
   return response.json();
 });
 
-var apiRequest2 = fetch("http://localhost:3000/rank/").then(function (
-  response
-) {
+var apiRequest2 = fetch("http://localhost:3000/rank/").then(function(response) {
   return response.json();
 });
 
@@ -59,12 +58,12 @@ var combinedData = {
 };
 // get data from both urls, asign them to an object as values and return an array of objects
 Promise.all([apiRequest1, apiRequest2])
-  .then(function (values) {
-    combinedData['apiRequest1'] = values[0];
-    combinedData['apiRequest2'] = values[1];
-    return Object.values(combinedData)
+  .then(function(values) {
+    combinedData["apiRequest1"] = values[0];
+    combinedData["apiRequest2"] = values[1];
+    return Object.values(combinedData);
   })
-  .then(function (combinedData) {
+  .then(function(combinedData) {
     var userStatsArr = combinedData[0];
     var generalStatsArr = combinedData[1];
     var challengesCompleted = userStatsArr.challengesCompleted;
@@ -76,4 +75,4 @@ Promise.all([apiRequest1, apiRequest2])
     rank.innerHTML = generalStatsArr[userPoints / 10].rank;
     avatarPic.src = generalStatsArr[userPoints / 10].avater_url;
     render(challengesCompleted, pointsLeft, userPoints, myLevel);
-  })
+  });
