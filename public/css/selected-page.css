@@ -42,7 +42,7 @@
   padding: 0.5rem;
 }
 
-#close-button:hover {
+#close-button:hover, #close-button:focus {
   transform: scale(1.1, 1.1);
 }
 
@@ -60,7 +60,7 @@
 }
 
 .challenge-page {
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
 }
 
 .action-section {

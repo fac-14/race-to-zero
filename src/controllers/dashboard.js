@@ -10,6 +10,7 @@ exports.get = (req, res) => {
   Promise.all([newChallenges, acceptedChallenges, completedChallenges])
     .then(challenges => {
       res.render("dashboard", {
+        activePage: { challenges: true },
         newChallenges: challenges[0],
         acceptedChallenges: challenges[1],
         completedChallenges: challenges[2]

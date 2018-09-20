@@ -24,7 +24,7 @@ function render(challengesCompleted, pointsLeft, userPoints, myLevel) {
   getPointsEntry.forEach(function (points) {
     points.innerHTML = userPoints;
   });
-  xpBar.setAttribute("value", userPoints);
+  xpBar.setAttribute("value", userPoints % 50);
   completedChallengesEntry.forEach(function (challenges) {
     challenges.innerHTML = challengesCompleted;
   });
