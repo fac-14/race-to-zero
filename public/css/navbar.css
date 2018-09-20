@@ -3,7 +3,7 @@
   font-family: "V-Gerb-Bold";
   src: url("../../public/assets/fonts/V-GERB-BOLD.ttf") format("truetype");
 }
-nav {
+.nav-main {
   position: fixed;
   top: 0;
   right: 0;
@@ -116,6 +116,36 @@ nav > h4 {
 
 .popout-menu--visible {
   transform: translateY(0);
+}
+
+.logged-out-nav {
+  position: fixed;
+  right: 0;
+  margin: 0.5rem;
+  height: 2rem;
+}
+
+.sign-in-button {
+  background-color: #00ba9f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  color: #fbf6f1;
+  cursor: pointer;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: none;
+}
+
+.sign-in-button:focus {
+  background-color: #ff9b71;
+}
+
+.sign-in-button-text {
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  margin: auto;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=navbar.css.map */

@@ -9,44 +9,49 @@
         </div>
 
         <!-- New Challenges -->
-        <section id="new-challenge" class="challenges-container tabcontent">
 
-            <header class="challenges-header">
-                <h2 class="main-title">New Challenges</h2>
-            </header>
-            <div class="challenges-container">
+        <section id="new-challenge" class="items-container tabcontent">
+            <h2 class="main-title">New Challenges</h2>
+            <div class="bought-container">
                 {{#each newChallenges}}
-                <div class="challenge-overview">
-                    {{!-- <img src='{{this.img_link}}'> --}}
-                    <h3 class="newChallH3">{{this.title}} : {{this.id}}</h3>
-                    <p>Reward Points: {{this.reward_points}}</p>
-                    <button class="new-challenge-button" id="{{this.id}}" onclick="window.location.href='/new-challenges/{{this.id}}'">
-                        Find out more
-                    </button>
+                <div class="items-overview">
+                    {{!-- <h3 class="newChallH3">{{this.title}} : {{this.id}}</h3> --}}
+                    <h3 class="newChallH3">{{this.title}}</h3>
+                    <div class="icons">
+                        <img class="bought-icon" src='{{this.img_link}}'>
+                        {{!-- <p>Reward Points: {{this.reward_points}}</p> --}}
+                        <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/new-challenges/{{this.id}}'">
+                            <img class="help-icon" src="../../public/imgs/help.svg" alt="">
+                        </button>
+                    </div>
                 </div>
-                {{/each}}
+            </div>
+            {{/each}}
 
         </section>
 
         <!-- Accepted Challenges -->
 
-        <section id="accepted-challenge" class="challenges-container tabcontent">
-            <header class="challenges-header">
-                <h2 class="main-title">Accepted Challenges</h2>
-            </header>
+        <section id="accepted-challenge" class="items-container tabcontent">
+            <h2 class="main-title">Accepted Challenges</h2>
             <div class="challenges-container">
                 {{#each acceptedChallenges}}
-                <div class="challenge-overview">
-                    {{!-- <img src='{{this.img_link}}'>
-                    --}}
-                    <h3>{{this.title}} : {{ this.challenge_id }}</h3>
-                    <p>Reward Points: {{this.reward_points}}</p>
-                    <button class="acc-challenge-button" id="{{this.id}}" onclick="window.location.href='/acc-challenges/{{this.challenge_id}}'">
-                        Find out more </button> {{/each}}
+                <div class="items-overview">
+                    <h3 class="newChallH3">{{this.title}}</h3>
+                    <div class="icons">
+                        <img class="bought-icon" src='{{this.img_link}}'>
+                        <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/acc-challenges/{{this.challenge_id}}'">
+                            <img class="help-icon" src="../../public/imgs/help.svg" alt="">
+                        </button>
+                    </div>
                 </div>
+            </div>
+
+            {{/each}}
+
         </section>
 
-        <!-- Accepted challenge -->
+        <!-- Completed challenge -->
 
         <section id="completed-challenge" class="challenges-container tabcontent">
             <header class="challenges-header">

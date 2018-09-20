@@ -41,13 +41,13 @@ function render(challengesCompleted, pointsLeft, userPoints, myLevel) {
   });
 }
 // 2 api request to get use specific stats and general user object
-var apiRequest1 = fetch("http://localhost:3000/send-stats/").then(function (
+var apiRequest1 = fetch("/send-stats/").then(function (
   response
 ) {
   return response.json();
 });
 
-var apiRequest2 = fetch("http://localhost:3000/total-stats-object/").then(function (
+var apiRequest2 = fetch("/total-stats-object/").then(function (
   response
 ) {
   return response.json();
