@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+@font-face {
+  font-family: "V-Gerb-Bold";
+  src: url("../../public/assets/fonts/V-GERB-BOLD.ttf") format("truetype");
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  margin: 110px 1rem 0rem 1rem;
+}
+
+.tab button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab li:active {
+  background-color: yellow;
+}
+
+.tab nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tab nav ul li button {
+  color: #0d9564;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+/*# sourceMappingURL=challenges.css.map */
