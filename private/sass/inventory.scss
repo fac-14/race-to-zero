@@ -1,0 +1,65 @@
+@import "colors";
+@import "fonts";
+@import "sizes";
+
+.items-container{
+margin: $medium;
+
+}
+
+.items-overview{
+display:flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+margin: 0;
+}
+
+.bought-icon,
+.suggested-icon{
+    width: 3rem;
+//   display: inline-block;
+  margin: $smallest;
+  height: 3rem;
+}
+
+.bought-container{
+    display:flex;
+    flex-direction: column;
+}
+    
+.new-item-button{
+    // display: inline-block;
+    display:block;
+    min-height: 2rem;
+    min-width: 2rem;
+    border: none;
+    padding: 0;
+    margin: $smallest;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.newItemH3{
+    margin: 0;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.help-icon {
+    // width: 15%;
+    display: block;
+    margin: auto;  
+    
+}
+
+
+
+
+.suggested-container{
+    display:flex;
+flex-direction: column;
+}

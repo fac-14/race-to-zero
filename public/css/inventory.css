@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+@font-face {
+  font-family: "V-Gerb-Bold";
+  src: url("../../public/assets/fonts/V-GERB-BOLD.ttf") format("truetype");
+}
+.items-container {
+  margin: 1rem;
+}
+
+.items-overview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.bought-icon,
+.suggested-icon {
+  width: 3rem;
+  margin: 0.25rem;
+  height: 3rem;
+}
+
+.bought-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-item-button {
+  display: block;
+  min-height: 2rem;
+  min-width: 2rem;
+  border: none;
+  padding: 0;
+  margin: 0.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.newItemH3 {
+  margin: 0;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.help-icon {
+  display: block;
+  margin: auto;
+}
+
+.suggested-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=inventory.css.map */

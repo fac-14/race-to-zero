@@ -11,6 +11,7 @@ const getSingleItem = require("./getSingleItem");
 const buyItem = require("./buyItem");
 const updatePoints = require("./updatePoints");
 const getUserPoints = require("./getUserPoints");
+const statsObj = require("./stats-object");
 
 module.exports = {
   acceptChallenge,
@@ -24,5 +25,6 @@ module.exports = {
   getSingleItem,
   buyItem,
   updatePoints,
-  getUserPoints
+  getUserPoints,
+  statsObj
 };
