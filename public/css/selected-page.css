@@ -84,7 +84,7 @@
 }
 
 .selected-item-img {
-  height: 50%;
+  height: 25vmax;
   border-radius: 2rem;
 }
 
