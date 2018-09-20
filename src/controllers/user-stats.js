@@ -10,7 +10,10 @@ exports.get = (req, res) => {
       for (let i = 0; i < user_stats.length; i++) {
         if (user_stats[i].challenges_completed === level) {
           const userStats = user_stats[i];
-          res.render("user-stats", { userStats: userStats });
+          res.render("user-stats", {
+            layout: "content-selected",
+            userStats: userStats
+          });
         }
       }
     });
