@@ -44,7 +44,7 @@
             <div class="challenges-container">
                 {{#each acceptedChallenges}}
                 <div class="items-overview">
-                    <h3 class="newChallH3">{{this.title}}</h3>
+                    <h3 id="challenge-content" class="newChallH3">{{this.title}}</h3>
                     <div class="icons">
                         <img class="bought-icon" src='{{this.img_link}}'>
                         <button class="new-item-button" id="{{this.id}}" onclick="window.location.href='/acc-challenges/{{this.challenge_id}}'">
