@@ -17,7 +17,7 @@ CREATE TABLE users
 INSERT INTO users
     (user_name, email, pass, points)
 VALUES
-    ('Armand', 'armandl@email.com', 'password12', 40),
+    ('Armand', 'armandl@email.com', 'password12', 10),
     ('Simon', 'simon@email.com', 'password12', 32),
     ('Emma', 'emma@email.com', 'password12', 20);
 
