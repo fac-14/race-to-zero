@@ -47,7 +47,7 @@ var apiRequest1 = fetch("http://localhost:3000/send-stats/").then(function (
   return response.json();
 });
 
-var apiRequest2 = fetch("http://localhost:3000/rank/").then(function (
+var apiRequest2 = fetch("http://localhost:3000/total-stats-object/").then(function (
   response
 ) {
   return response.json();
