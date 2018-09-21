@@ -25,19 +25,6 @@
   cursor: pointer;
 }
 
-.tab button:hover {
-  background-color: #ddd;
-  border-radius: 3px;
-}
-
-.tab button:focus,
-.tab button:active {
-  background-color: #ff9b71;
-  color: #1d2425;
-  border: none;
-  border-radius: 3px;
-}
-
 .tab nav ul {
   list-style: none;
   display: flex;
@@ -49,6 +36,10 @@
 .tab nav ul li button {
   color: #0d9564;
   margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.tablinks .active {
+  color: red;
 }
 
 /*# sourceMappingURL=challenges.css.map */
