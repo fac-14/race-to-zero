@@ -26,7 +26,7 @@ function render(challengesCompleted, pointsLeft, userPoints, myLevel) {
     points.innerHTML = userPoints;
   });
 
-  xpBar.setAttribute("value", userPoints % 50);
+  xpBar.setAttribute("value", userPoints % 20);
   completedChallengesEntry.forEach(function(challenges) {
     challenges.innerHTML = challengesCompleted;
   });
@@ -69,10 +69,11 @@ Promise.all([apiRequest1, apiRequest2])
     var challengesCompleted = userStatsArr.challengesCompleted;
     var pointsLeft = userStatsArr.pointsLeft;
     var userPoints = userStatsArr.userPoints;
-    var myLevel = Math.floor(userPoints / 50);
+    var myLevel = Math.floor(userPoints / 10);
     // rendering starts here
     // avatar and rank relates to user points / 10 as each challenge has 10 points
     rank.innerHTML = generalStatsArr[myLevel].rank;
+    console.log(myLevel);
     avatarPic.src = generalStatsArr[myLevel].avater_url;
     render(challengesCompleted, pointsLeft, userPoints, myLevel);
   });

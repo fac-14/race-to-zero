@@ -9,21 +9,31 @@
   <img class="bought-icon" id="learn-more-icon" src='{{item.img_link}}'>
   <h2 class="selected-item-title">{{{item.title}}}</h2>
 
+  <nav>
+    <div class="item-select-tab">
+      <button class="item-select-btn" onclick="openItem(event, 'item-what')" id="defaultOpen">The Item</button>
+      <button class="item-select-btn" onclick="openItem(event, 'item-why')">Why it is important</button>
+    </div>
+  </nav>
 
-  <article class="item-what">
-    <h3>What</h3>
+
+  <article id="item-what" class="item-tab item-what">
     <p>
       {{{item.what}}}
     </p>
   </article>
 
-  <article class="item-why">
-    <h3>Why</h3>
+  <article id="item-why" class="item-tab item-why" style="display:none">
     <p>
       {{{item.why}}}
     </p>
   </article>
 
   <a href="{{{item.ext_link}}}" target="_blank" class="ext-link"><button class="single-page-button">Find out more</button></a>
+
+  <form action="/inventory/item-bought" method="post">
+    <input name="item_id" type="hidden" value="{{item.id}}">
+    <button type="submit" value="bought item" class="single-page-button">I have bought this item!</button></a>
+  </form>
 
 </section>
