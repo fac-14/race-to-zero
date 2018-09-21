@@ -42,7 +42,8 @@
   padding: 0.5rem;
 }
 
-#close-button:hover, #close-button:focus {
+#close-button:hover,
+#close-button:focus {
   transform: scale(1.1, 1.1);
 }
 
@@ -78,13 +79,14 @@
 }
 
 .header-img {
-  width: 100%;
+  height: 100px;
   display: flex;
   justify-content: center;
 }
 
 .selected-item-img {
-  height: 50%;
+
+  height: 100%;
   border-radius: 2rem;
 }
 
@@ -136,9 +138,24 @@
   margin-right: 0.5rem;
 }
 
-/*# sourceMappingURL=selected-page.css.map */
+.congrats-title {
+  margin-top: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #fbf6f1;
+  text-shadow: -2px 2px #404973;
+}
 
-/* Tab between challenge what and why */
+.congrats-descrip {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+#congrats-msg {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 .chall-select-tab {
   display: flex;
@@ -162,31 +179,78 @@
   font-family: "Dosis", sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color:#fbf6f1;
+  color: #fbf6f1;
 }
 
-/* Change background color of buttons on hover */
 .chall-select-tab button:hover {
   border: 2px solid #00ba9f;
   border-width: 5px 3px 3px 5px;
-  border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
   transform: rotate(2deg);
 }
 
-/* Create an active/current tablink class */
 .chall-select-tab button.active {
   border: 2px solid #00ba9f;
   border-width: 3px 4px 3px 5px;
-  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
   transform: rotate(2deg);
 }
 
-/* Style the tab content */
-.challenge-tab  {
+.challenge-tab {
   display: none;
   border-top: none;
 }
 
 .challenge-tab p {
-margin-top: 1rem;
+  margin-top: 1rem;
 }
+
+.item-select-tab {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  border: #fbf6f1 solid 0.5px;
+  border-radius: 1rem;
+  height: 2rem;
+  color: #fbf6f1;
+  background-color: #ff9b71;
+}
+
+.item-select-tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Dosis", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fbf6f1;
+}
+
+.item-select-tab button:hover {
+  border: 2px solid #00ba9f;
+  border-width: 5px 3px 3px 5px;
+  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+  transform: rotate(2deg);
+}
+
+.item-select-tab button.active {
+  border: 2px solid #00ba9f;
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+}
+
+.item-tab {
+  display: none;
+  border-top: none;
+}
+
+.item-tab p {
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=selected-page.css.map */
