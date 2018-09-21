@@ -15,7 +15,7 @@
 
         {{#each boughtItems}}
 
-        <div class="items-overview">
+        <div class="items-overview" onclick="window.location.href='/inventory/bought-item/{{this.id}}'">
             <h3 class="newItemH3">{{this.title}}</h3>
             <div class="icons">
                 <img class="bought-icon" src='{{this.img_link}}'>
@@ -37,7 +37,7 @@
 
         {{#each suggestedItems}}
 
-        <div class="items-overview">
+        <div class="items-overview" onclick="window.location.href='/inventory/suggested-item/{{this.id}}'">
             <h3 class="newItemH3">{{this.title}}</h3>
             <div class="icons">
                 <img class="suggested-icon" src='{{this.img_link}}'>

@@ -43,7 +43,7 @@
         <section id="accepted-challenge" class="items-container tabcontent">
             <div class="challenges-container">
                 {{#each acceptedChallenges}}
-                <div class="items-overview" onclick="window.location.href='/new-challenges/{{this.id}}'">
+                <div class="items-overview" onclick="window.location.href='/acc-challenges/{{this.challenge_id}}'">
                     <h3 id="challenge-content" class="newChallH3">{{this.title}}</h3>
                     <div class="icons">
                         <img class="bought-icon" src='{{this.img_link}}'>
@@ -63,7 +63,7 @@
         <section id="completed-challenge" class="items-container tabcontent">
             <div class="challenges-container">
                 {{#each completedChallenges}}
-                <div class="items-overview" onclick="window.location.href='/new-challenges/{{this.id}}'">
+                <div class="items-overview" onclick="window.location.href='/comp-challenges/{{this.challenge_id}}'">
                     <h3 class="newChallH3">{{this.title}}</h3>
                     <div class="icons">
                         <img class="bought-icon" src='{{this.img_link}}'>
