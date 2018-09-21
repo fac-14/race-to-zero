@@ -3,7 +3,7 @@
 function openCity(evt, cityName) {
   // Declare all variables
 
-  let i, tabcontent, tablinks;
+  var i, tabcontent, tablinks;
 
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -23,9 +23,24 @@ function openCity(evt, cityName) {
 }
 // To show first tab by default //
 
-document.getElementById("defaultOpen").click();
-
 function goBack() {
   window.history.back();
 }
-//
+
+
+// function to tab between what and why when chall is selected
+function openChallenge(evt, challengeDescr) {
+  var challengeTab = document.querySelectorAll(".challenge-tab");
+  for (var i = 0; i < challengeTab.length; i++) {
+    challengeTab[i].style.display = "none";
+  }
+  var challengeTabBtn = document.querySelectorAll(".chall-select-btn");
+
+  for (i = 0; i < challengeTabBtn.length; i++) {
+    challengeTabBtn[i].className = challengeTabBtn[i].className.replace(" active", "");
+  }
+
+  document.getElementById(challengeDescr).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
