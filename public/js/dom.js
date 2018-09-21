@@ -19,21 +19,44 @@ function openCity(evt, cityName) {
 }
 // To show first tab by default //
 document.getElementById("defaultOpen").click();
+
 //
+
 function goBack() {
   window.history.back();
 }
 
-
-
-
 /* If Accepted challenge contains an item, it's the first thing to load
    otherwise all challenges will load first */
 
-   document.addEventListener('DOMContentLoaded', () => {
-    const contentChecker = document.querySelector('#challenge-content')
-    const
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    const contentChecker = document.querySelector("#challenge-content");
+    const accepted = document.querySelector("#accepted-challenge");
+    const all = document.querySelector("#new-challenge");
+
     if (contentChecker) {
-    console.log(contentChecker)
+      accepted.style.display = "block";
+      all.style.display = "none";
     }
-}, false);
+  },
+  false
+);
+
+//
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    const activeTab = document.querySelector(".active");
+    const list = document.getElementsByClassName("items-container");
+    console.log(activeTab);
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].style.display === "block") {
+        // active.style;
+      }
+    }
+  },
+  false
+);

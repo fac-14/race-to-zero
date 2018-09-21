@@ -2,58 +2,57 @@
 @import "fonts";
 @import "sizes";
 
-
 .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 10px;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 10px;
 }
 
 .tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    margin: 110px 1rem  0rem 1rem;
-    border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  margin: 110px 1rem 0rem 1rem;
+  border-radius: 10px;
 }
 
 .tab button {
-    background-color: inherit;
-    border: none;
-    cursor: pointer;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
 }
 
-.tab button:hover {
-    background-color: #ddd;
-    border-radius: 3px;
-}
+// .tab button:hover {
+//   background-color: #ddd;
+//   border-radius: 3px;
+// }
 
-.tab button:focus,
- .tab button:active,
-//  .tab li:active
-{
-    background-color: $orange1;
-    color: $black;
-    border: none;
-    // padding: $smallest;
-    border-radius: 3px;
-}
+// .tab button:focus,
+//  .tab button:active,
+// //  .tab li:active
+//  {
+//   background-color: $orange1;
+//   color: $black;
+//   border: none;
+//   // padding: $smallest;
+//   border-radius: 3px;
+// }
 
-.tab nav {
-    
-}
 .tab nav ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-
 }
 
 .tab nav ul li button {
-    color: #0d9564;
-    margin: 0.5rem 1rem 0.5rem 1rem;
+  color: #0d9564;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.tablinks .active {
+  color: red;
 }
