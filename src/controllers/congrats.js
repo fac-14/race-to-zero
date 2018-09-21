@@ -12,8 +12,8 @@ exports.get = (req, res) => {
         if (user_stats[i].challenges_completed === level) {
           console.log(user_stats[i]);
           const userStats = user_stats[i];
-          res.render("user-stats", {
-            layout: "content-selected",
+          res.render("congrats", {
+            layout: "congrats-layout",
             userStats: userStats
           });
         }
