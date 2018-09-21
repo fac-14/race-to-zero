@@ -2,17 +2,17 @@
     {{!--
 
     <body onload="document.getElementById('defaultOpen').click()"> --}}
-<!-- Tabbed test -->
+        <!-- Tabbed test -->
 
- 
+
 
         <div class="tab">
             <nav>
-            <ul>
-                <li><button class="tablinks" onclick="openCity(event, 'new-challenge')" id="defaultOpen">All</button></li>
-                <li> <button class="tablinks" onclick="openCity(event, 'accepted-challenge')">Accepted </button></li>
-                <li> <button class="tablinks" onclick="openCity(event, 'completed-challenge')">Completed</button></li>
-            </ul>
+                <ul>
+                    <li><button class="tablinks" onclick="openCity(event, 'new-challenge')" id="defaultOpen">All</button></li>
+                    <li> <button class="tablinks" onclick="openCity(event, 'accepted-challenge')">Accepted </button></li>
+                    <li> <button class="tablinks" onclick="openCity(event, 'completed-challenge')">Completed</button></li>
+                </ul>
             </nav>
 
         </div>
@@ -22,7 +22,7 @@
         <section id="new-challenge" class="items-container tabcontent">
             <div class="bought-container">
                 {{#each newChallenges}}
-                <div class="items-overview">
+                <div class="items-overview" onclick="window.location.href='/new-challenges/{{this.id}}'">
                     {{!-- <h3 class="newChallH3">{{this.title}} : {{this.id}}</h3> --}}
                     <h3 class="newChallH3">{{this.title}}</h3>
                     <div class="icons">
@@ -43,7 +43,7 @@
         <section id="accepted-challenge" class="items-container tabcontent">
             <div class="challenges-container">
                 {{#each acceptedChallenges}}
-                <div class="items-overview">
+                <div class="items-overview" onclick="window.location.href='/acc-challenges/{{this.challenge_id}}'">
                     <h3 id="challenge-content" class="newChallH3">{{this.title}}</h3>
                     <div class="icons">
                         <img class="bought-icon" src='{{this.img_link}}'>
@@ -63,7 +63,7 @@
         <section id="completed-challenge" class="items-container tabcontent">
             <div class="challenges-container">
                 {{#each completedChallenges}}
-                <div class="items-overview">
+                <div class="items-overview" onclick="window.location.href='/comp-challenges/{{this.challenge_id}}'">
                     <h3 class="newChallH3">{{this.title}}</h3>
                     <div class="icons">
                         <img class="bought-icon" src='{{this.img_link}}'>
@@ -71,7 +71,7 @@
                             <img class="help-icon" src="../../public/imgs/help.svg" alt="">
                         </button>
                     </div>
-                    </div>
                 </div>
-                {{/each}}
+            </div>
+            {{/each}}
         </section>
