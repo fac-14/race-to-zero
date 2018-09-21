@@ -2,7 +2,7 @@ module.exports = [
   {
     title: "Plastic",
     information:
-      "Every single piece of plastic that has ever been produced still exists today. It isn't in the same place anymore, and probably unrecognizable - but it's certainly still there, just no longer visible to most of us.  "
+      "Every single piece of plastic that has ever been produced still exists today. It isn't in the same place anymore, and probably unrecognizable - but it's certainly still there, just no longer visible to most of us."
   },
   {
     title: "Clothing",
@@ -12,7 +12,7 @@ module.exports = [
   {
     title: "Food",
     information:
-      "Each year 1.3bn tonnes of food, about a third of all that is produced, is wasted, including about 45% of all fruit and vegetables, 35% of fish and seafood, 30% of cereals, 20% of dairy products and 20% of meat."
+      "Each year 1.3bn tonnes of food (about a third of all that is produced) is wasted, including about 45% of all fruit and vegetables, 35% of fish and seafood, 30% of cereals, 20% of dairy products and 20% of meat."
   },
   {
     title: "Electric",
@@ -27,6 +27,6 @@ module.exports = [
   {
     title: "Paper",
     information:
-      "Each year 1.3bn tonnes of food, about a third of all that is produced, is wasted, including about 45% of all fruit and vegetables, 35% of fish and seafood, 30% of cereals, 20% of dairy products and 20% of meat."
+      "Paper production accounts for about 35% of felled trees and it's been estimated that recycling half the world’s paper would avoid the harvesting of 20 million acres of forestland. As well as saving the trees it is also less energy and water intensive than paper made from wood pulp."
   }
 ];
