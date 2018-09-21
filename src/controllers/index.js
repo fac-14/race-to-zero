@@ -19,6 +19,7 @@ const error = require("./error");
 const sendStats = require("./sendStats");
 const sendWholeStatsObject = require("./sendWholeStatsObject");
 const intro = require("./intro");
+const congrats = require("./congrats");
 
 router.get("/", landing.get);
 // router.get("signup", signup.get);
@@ -30,6 +31,8 @@ router.get("/dashboard", dashboard.get);
 router.get("/new-challenges/:id", challSelect.get);
 router.get("/acc-challenges/:id", challSelect.get);
 router.get("/comp-challenges/:id", challSelect.get);
+
+router.get("/congrats", congrats.get);
 
 // routes for inventory section
 router.get("/inventory", inventory.get);
@@ -57,7 +60,7 @@ router.post("/challenge/completed/", (req, res) => {
   // insert query here to add completed challenge to database
   queries.completeChallenge(req.body.challenge_id, 1);
   // console.log("Challenge completed!");
-  res.redirect(302, "/dashboard");
+  res.redirect(302, "/congrats");
   res.end();
 });
 
