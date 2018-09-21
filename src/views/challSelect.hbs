@@ -7,16 +7,21 @@
   <h2 class="selected-item-title">{{{challenge.title}}}</h2>
   <h2 class="accept-challenge-section id-hidden">{{{challenge.id}}}</h2>
 
+  <nav>
+    <div class="chall-select-tab">
+      <button class="chall-select-btn" onclick="openChallenge(event, 'challenge-what')" id="defaultOpen">The Challenge</button>
+      <button class="chall-select-btn" onclick="openChallenge(event, 'challenge-why')">Why it is important</button>
+    </div>
+  </nav>
 
-  <article class="challenge-what">
-    <h3>What</h3>
+
+  <article id="challenge-what" class="challenge-tab challenge-what">
     <p>
       {{{challenge.what}}}
     </p>
   </article>
 
-  <article class="challenge-why">
-    <h3>Why</h3>
+  <article id="challenge-why" class="challenge-tab challenge-why" style="display:none">
     <p>
       {{{challenge.why}}}
     </p>

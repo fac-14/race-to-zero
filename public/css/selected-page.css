@@ -137,3 +137,56 @@
 }
 
 /*# sourceMappingURL=selected-page.css.map */
+
+/* Tab between challenge what and why */
+
+.chall-select-tab {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  border: #fbf6f1 solid 0.5px;
+  border-radius: 1rem;
+  height: 2rem;
+  color: #fbf6f1;
+  background-color: #ff9b71;
+}
+
+.chall-select-tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Dosis", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color:#fbf6f1;
+}
+
+/* Change background color of buttons on hover */
+.chall-select-tab button:hover {
+  border: 2px solid #00ba9f;
+  border-width: 5px 3px 3px 5px;
+  border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+  transform: rotate(2deg);
+}
+
+/* Create an active/current tablink class */
+.chall-select-tab button.active {
+  border: 2px solid #00ba9f;
+  border-width: 3px 4px 3px 5px;
+  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+}
+
+/* Style the tab content */
+.challenge-tab  {
+  display: none;
+  border-top: none;
+}
+
+.challenge-tab p {
+margin-top: 1rem;
+}

@@ -60,3 +60,20 @@ document.addEventListener(
 //   },
 //   false
 // );
+
+// function to tab between what and why when chall is selected
+function openChallenge(evt, challengeDescr) {
+  let challengeTab = document.querySelectorAll(".challenge-tab");
+  for (var i = 0; i < challengeTab.length; i++) {
+    challengeTab[i].style.display = "none";
+  }
+  let challengeTabBtn = document.querySelectorAll(".chall-select-btn");
+
+  for (i = 0; i < challengeTabBtn.length; i++) {
+    challengeTabBtn[i].className = challengeTabBtn[i].className.replace(" active", "");
+  }
+
+  document.getElementById(challengeDescr).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
