@@ -7,12 +7,14 @@ const landing = require("./landing");
 // const login = require("./login");
 const dashboard = require("./dashboard");
 const challSelect = require("./challSelect");
+const acceptChallenge = require("../model/acceptChallenge");
+const completeChallenge = require("../model/completeChallenge");
 const inventory = require("./inventory");
 const suggestedItem = require("./suggested-item-select");
+const buyItem = require("./buy-item");
 const boughtItem = require("./bought-item-select");
 const learn = require("./learn");
 const userStats = require("./user-stats");
-const queries = require("../model/index");
 const singleTopic = require("./getSingleTopic");
 const errorRoute = require("./error-route");
 const error = require("./error");
@@ -39,36 +41,14 @@ router.get("/make-error", errorRoute);
 router.get("/learn", learn.get);
 router.get("/stats", userStats.get);
 router.get("/learn/:singleTopic", singleTopic.get);
-
 // Sending the points object
 router.get("/send-stats", sendStats.get);
-
 router.get("/total-stats-object", sendWholeStatsObject.get);
-
 // accepting and completing challenges
-router.post("/challenge/accepted/", (req, res) => {
-  // insert query here to add accepted challenge to database
-  queries.acceptChallenge(req.body.challenge_id, 1);
-  res.redirect(302, "/dashboard");
-  res.end();
-});
-
-router.post("/challenge/completed/", (req, res) => {
-  // insert query here to add completed challenge to database
-  queries.completeChallenge(req.body.challenge_id, 1);
-  // console.log("Challenge completed!");
-  res.redirect(302, "/dashboard");
-  res.end();
-});
-
+router.post("/challenge/accepted/", acceptChallenge);
+router.post("/challenge/completed/", completeChallenge);
 // buying an item
-router.post("/inventory/item-bought/", (req, res) => {
-  queries.buyItem(req.body.item_id, 1);
-  console.log("Item bought!");
-  res.redirect(302, "/inventory");
-  res.end();
-});
-
+router.post("/inventory/item-bought/", buyItem);
 // introduction
 router.get("/intro", intro.get);
 
