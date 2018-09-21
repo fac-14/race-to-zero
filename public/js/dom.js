@@ -46,17 +46,17 @@ document.addEventListener(
 
 //
 
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    const activeTab = document.querySelector(".active");
-    const list = document.getElementsByClassName("items-container");
-    console.log(activeTab);
-    for (let i = 0; i < list.length; i++) {
-      if (list[i].style.display === "block") {
-        // active.style;
-      }
-    }
-  },
-  false
-);
+// document.addEventListener(
+//   "DOMContentLoaded",
+//   () => {
+//     const activeTab = document.querySelector(".active");
+//     const list = document.getElementsByClassName("items-container");
+//     console.log(activeTab);
+//     for (let i = 0; i < list.length; i++) {
+//       if (list[i].style.display === "block") {
+//         // active.style;
+//       }
+//     }
+//   },
+//   false
+// );
