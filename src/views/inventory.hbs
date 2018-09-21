@@ -1,6 +1,16 @@
-<section class="items-container">
-    <h2 class="main-title">Bought Items</h2>
+<div class="tab">
+            <nav>
+            <ul>
+                <li><button class="tablinks" onclick="inventoryTab(event, 'bought-items')" >Bought Items</button></li>
+                <li> <button id="defaultOpen" class="tablinks" onclick="inventoryTab(event, 'suggested-items') ">Suggested Items</button></li>
+            </ul>
+            </nav>
 
+        </div>
+
+
+<section id="bought-items" class="items-container tabcontent">
+    <h2 class="main-title">Bought Items</h2>
     <div class="bought-container">
 
         {{#each boughtItems}}
@@ -14,6 +24,7 @@
                 </button>
             </div>
         </div>
+        </div>
 
         {{/each}}
 
@@ -21,7 +32,7 @@
 </section>
 
 
-<section class="items-container">
+<section id="suggested-items" class="items-container tabcontent">
     <h2 class="main-title">Suggested Items</h2>
 
     <div class="suggested-container">
