@@ -90,8 +90,23 @@ function openChallenge(evt, challengeDescr) {
   for (i = 0; i < challengeTabBtn.length; i++) {
     challengeTabBtn[i].className = challengeTabBtn[i].className.replace(" active", "");
   }
-
   document.getElementById(challengeDescr).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+function openItem(evt, itemDescr) {
+  const itemTab = document.querySelectorAll(".item-tab");
+  for (var i = 0; i < itemTab.length; i++) {
+    itemTab[i].style.display = "none";
+  }
+  const itemTabBtn = document.querySelectorAll(".item-select-btn");
+
+  for (i = 0; i < itemTabBtn.length; i++) {
+    itemTabBtn[i].className = itemTabBtn[i].className.replace(" active", "");
+  }
+
+  document.getElementById(itemDescr).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 document.getElementById("defaultOpen").click();
+
