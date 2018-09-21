@@ -8,6 +8,7 @@
   border: 1px solid #ccc;
   border-top: none;
   border-radius: 10px;
+  margin-bottom: $smallest;
 }
 
 .tab {
@@ -24,21 +25,21 @@
   cursor: pointer;
 }
 
-// .tab button:hover {
-//   background-color: #ddd;
-//   border-radius: 3px;
-// }
+.tab button:hover {
+  background-color: #ddd;
+  border-radius: 3px;
+}
 
-// .tab button:focus,
-//  .tab button:active,
-// //  .tab li:active
-//  {
-//   background-color: $orange1;
-//   color: $black;
-//   border: none;
-//   // padding: $smallest;
-//   border-radius: 3px;
-// }
+.tab button:focus,
+ .tab button:active,
+//  .tab li:active
+ {
+  background-color: $orange1;
+  color: $black;
+  border: none;
+  // padding: $smallest;
+  border-radius: 3px;
+}
 
 .tab nav ul {
   list-style: none;

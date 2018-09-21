@@ -9,6 +9,7 @@
   border: 1px solid #ccc;
   border-top: none;
   border-radius: 10px;
+  margin-bottom: 0.25rem;
 }
 
 .tab {
@@ -23,6 +24,19 @@
   background-color: inherit;
   border: none;
   cursor: pointer;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+  border-radius: 3px;
+}
+
+.tab button:focus,
+.tab button:active {
+  background-color: #ff9b71;
+  color: #1d2425;
+  border: none;
+  border-radius: 3px;
 }
 
 .tab nav ul {

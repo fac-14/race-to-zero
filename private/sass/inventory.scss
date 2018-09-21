@@ -7,11 +7,17 @@
 }
 
 .items-overview {
+  display: block;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 0;
+  border: 2px $navy1 solid;
+  border-top: 1px $navy1 solid;
+  border-right: 1px $navy1 solid;
+  border-radius: 10px;
+  padding: $smallest;
+  margin-bottom: $small;
 }
 
 .bought-icon,
