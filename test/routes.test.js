@@ -164,7 +164,6 @@ describe("Test the send user stats page", () => {
     supertest(app)
       .get("/send-stats/")
       .then(response => {
-        console.log(response.statusCode);
         expect(response.statusCode).toBe(200);
         done();
       });

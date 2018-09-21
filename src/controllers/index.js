@@ -32,7 +32,6 @@ router.get("/dashboard", dashboard.get);
 router.get("/new-challenges/:id", challSelect.get);
 router.get("/acc-challenges/:id", challSelect.get);
 router.get("/comp-challenges/:id", challSelect.get);
-
 // routes for inventory section
 router.get("/inventory", inventory.get);
 router.get("/inventory/suggested-item/:id", suggestedItem.get);
