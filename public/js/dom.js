@@ -80,33 +80,56 @@ document.addEventListener(
 // );
 
 // function to tab between what and why when chall is selected
-function openChallenge(evt, challengeDescr) {
-  const challengeTab = document.querySelectorAll(".challenge-tab");
-  for (var i = 0; i < challengeTab.length; i++) {
-    challengeTab[i].style.display = "none";
-  }
-  const challengeTabBtn = document.querySelectorAll(".chall-select-btn");
 
-  for (i = 0; i < challengeTabBtn.length; i++) {
-    challengeTabBtn[i].className = challengeTabBtn[i].className.replace(" active", "");
-  }
-  document.getElementById(challengeDescr).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+function tabCreator(tabElement, tabElementBtn, evt, elementDescr) {
+  var tabElement = document.querySelectorAll("." + tabElement);
+  var tabElementBtn = document.querySelectorAll("." + tabElementBtn);
+  var elementDescr = document.getElementById(elementDescr);
 
-function openItem(evt, itemDescr) {
-  const itemTab = document.querySelectorAll(".item-tab");
-  for (var i = 0; i < itemTab.length; i++) {
-    itemTab[i].style.display = "none";
-  }
-  const itemTabBtn = document.querySelectorAll(".item-select-btn");
-
-  for (i = 0; i < itemTabBtn.length; i++) {
-    itemTabBtn[i].className = itemTabBtn[i].className.replace(" active", "");
+  for (var i = 0; i < tabElement.length; i++) {
+    tabElement[i].style.display = "none";
   }
 
-  document.getElementById(itemDescr).style.display = "block";
+  for (i = 0; i < tabElementBtn.length; i++) {
+    tabElementBtn[i].className = tabElementBtn[i].className.replace(" active", "");
+  }
+  console.log(elementDescr);
+
+  elementDescr.style.display = "block";
   evt.currentTarget.className += " active";
 }
 document.getElementById("defaultOpen").click();
+
+
+// function openChallenge(evt, challengeDescr) {
+//   const challengeTab = document.querySelectorAll(".challenge-tab");
+//   console.log(challengeTab.length);
+
+//   for (var i = 0; i < challengeTab.length; i++) {
+//     challengeTab[i].style.display = "none";
+//   }
+//   const challengeTabBtn = document.querySelectorAll(".chall-select-btn");
+
+//   for (i = 0; i < challengeTabBtn.length; i++) {
+//     challengeTabBtn[i].className = challengeTabBtn[i].className.replace(" active", "");
+//   }
+//   document.getElementById(challengeDescr).style.display = "block";
+//   evt.currentTarget.className += " active";
+// }
+
+// function openItem(evt, itemDescr) {
+//   const itemTab = document.querySelectorAll(".item-tab");
+//   for (var i = 0; i < itemTab.length; i++) {
+//     itemTab[i].style.display = "none";
+//   }
+//   const itemTabBtn = document.querySelectorAll(".item-select-btn");
+
+//   for (i = 0; i < itemTabBtn.length; i++) {
+//     itemTabBtn[i].className = itemTabBtn[i].className.replace(" active", "");
+//   }
+
+//   document.getElementById(itemDescr).style.display = "block";
+//   evt.currentTarget.className += " active";
+// }
+
 
