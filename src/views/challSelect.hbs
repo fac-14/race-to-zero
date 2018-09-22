@@ -9,11 +9,12 @@
 
   <nav>
     <div class="chall-select-tab">
-      <button class="chall-select-btn" onclick="openChallenge(event, 'challenge-what')" id="defaultOpen">The Challenge</button>
-      <button class="chall-select-btn" onclick="openChallenge(event, 'challenge-why')">Why it is important</button>
+      <button class="chall-select-btn" onclick="tabCreator('challenge-tab', 'chall-select-btn',event, 'challenge-what')"
+        id="defaultOpen">The Challenge</button>
+      <button class="chall-select-btn" onclick="tabCreator('challenge-tab', 'chall-select-btn',event, 'challenge-why')">Why
+        it is important</button>
     </div>
   </nav>
-
 
   <article id="challenge-what" class="challenge-tab challenge-what">
     <p>
