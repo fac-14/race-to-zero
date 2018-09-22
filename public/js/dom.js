@@ -1,48 +1,27 @@
 // wooooo go dom
 
-// function openCity(evt, cityName) {
-//   let i, tabcontent, tablinks;
-
-//   tabcontent = document.getElementsByClassName("tabcontent");
-//   for (i = 0; i < tabcontent.length; i++) {
-//     tabcontent[i].style.display = "none";
-//   }
-
-//   tablinks = document.getElementsByClassName("tablinks");
-//   for (i = 0; i < tablinks.length; i++) {
-//     tablinks[i].className = tablinks[i].className.replace(" active", "");
-//   }
-//   document.getElementById(cityName).style.display = "block";
-//   evt.currentTarget.className += " active";
-// }
-
-//
-
-function inventoryTab(evt, cityName) {
-  let i, tabcontent, tablinks;
-
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// To show first tab by default //
-document.getElementById("defaultOpen").click();
-
-//
-
 function goBack() {
   window.history.back();
 }
+
+// function to tab between selected elements (challenges, items, menus)
+
+function tabCreator(tabElement, tabElementBtn, evt, elementDescr) {
+  var tabElement = document.querySelectorAll("." + tabElement);
+  var tabElementBtn = document.querySelectorAll("." + tabElementBtn);
+  var elementDescr = document.getElementById(elementDescr);
+
+  for (var i = 0; i < tabElement.length; i++) {
+    tabElement[i].style.display = "none";
+  }
+  for (i = 0; i < tabElementBtn.length; i++) {
+    tabElementBtn[i].className = tabElementBtn[i].className.replace(" active", "");
+  }
+  elementDescr.style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
 
 /* If Accepted challenge contains an item, it's the first thing to load
    otherwise all challenges will load first */
@@ -78,22 +57,3 @@ document.addEventListener(
 //   },
 //   false
 // );
-
-// function to tab between selected elements (challenges, items, menus)
-
-function tabCreator(tabElement, tabElementBtn, evt, elementDescr) {
-  var tabElement = document.querySelectorAll("." + tabElement);
-  var tabElementBtn = document.querySelectorAll("." + tabElementBtn);
-  var elementDescr = document.getElementById(elementDescr);
-
-  for (var i = 0; i < tabElement.length; i++) {
-    tabElement[i].style.display = "none";
-  }
-  for (i = 0; i < tabElementBtn.length; i++) {
-    tabElementBtn[i].className = tabElementBtn[i].className.replace(" active", "");
-  }
-  elementDescr.style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-document.getElementById("defaultOpen").click();
