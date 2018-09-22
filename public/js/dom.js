@@ -89,33 +89,17 @@ function tabCreator(tabElement, tabElementBtn, evt, elementDescr) {
   for (var i = 0; i < tabElement.length; i++) {
     tabElement[i].style.display = "none";
   }
-
   for (i = 0; i < tabElementBtn.length; i++) {
     tabElementBtn[i].className = tabElementBtn[i].className.replace(" active", "");
   }
-  console.log(elementDescr);
-
   elementDescr.style.display = "block";
   evt.currentTarget.className += " active";
 }
+
 document.getElementById("defaultOpen").click();
 
 
-// function openChallenge(evt, challengeDescr) {
-//   const challengeTab = document.querySelectorAll(".challenge-tab");
-//   console.log(challengeTab.length);
 
-//   for (var i = 0; i < challengeTab.length; i++) {
-//     challengeTab[i].style.display = "none";
-//   }
-//   const challengeTabBtn = document.querySelectorAll(".chall-select-btn");
-
-//   for (i = 0; i < challengeTabBtn.length; i++) {
-//     challengeTabBtn[i].className = challengeTabBtn[i].className.replace(" active", "");
-//   }
-//   document.getElementById(challengeDescr).style.display = "block";
-//   evt.currentTarget.className += " active";
-// }
 
 // function openItem(evt, itemDescr) {
 //   const itemTab = document.querySelectorAll(".item-tab");
