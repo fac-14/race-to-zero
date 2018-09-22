@@ -1,20 +1,20 @@
 // wooooo go dom
 
-function openCity(evt, cityName) {
-  let i, tabcontent, tablinks;
+// function openCity(evt, cityName) {
+//   let i, tabcontent, tablinks;
 
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+//   tabcontent = document.getElementsByClassName("tabcontent");
+//   for (i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none";
+//   }
 
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+//   tablinks = document.getElementsByClassName("tablinks");
+//   for (i = 0; i < tablinks.length; i++) {
+//     tablinks[i].className = tablinks[i].className.replace(" active", "");
+//   }
+//   document.getElementById(cityName).style.display = "block";
+//   evt.currentTarget.className += " active";
+// }
 
 //
 
@@ -79,7 +79,7 @@ document.addEventListener(
 //   false
 // );
 
-// function to tab between what and why when chall is selected
+// function to tab between selected elements (challenges, items, menus)
 
 function tabCreator(tabElement, tabElementBtn, evt, elementDescr) {
   var tabElement = document.querySelectorAll("." + tabElement);
@@ -97,23 +97,3 @@ function tabCreator(tabElement, tabElementBtn, evt, elementDescr) {
 }
 
 document.getElementById("defaultOpen").click();
-
-
-
-
-// function openItem(evt, itemDescr) {
-//   const itemTab = document.querySelectorAll(".item-tab");
-//   for (var i = 0; i < itemTab.length; i++) {
-//     itemTab[i].style.display = "none";
-//   }
-//   const itemTabBtn = document.querySelectorAll(".item-select-btn");
-
-//   for (i = 0; i < itemTabBtn.length; i++) {
-//     itemTabBtn[i].className = itemTabBtn[i].className.replace(" active", "");
-//   }
-
-//   document.getElementById(itemDescr).style.display = "block";
-//   evt.currentTarget.className += " active";
-// }
-
-
