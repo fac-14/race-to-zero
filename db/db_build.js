@@ -1,12 +1,13 @@
 const fs = require("fs");
+const assert = require("assert");
 const dbConnection = require("./db_connection");
 
-const sql = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
+const initialiseDatabase = () => {
+  fs.readFile(`${__dirname}/db_build.sql`, 'utf8', (err, sql) => {
+    assert(!err, err);
 
-const initialiseDatabase = () => dbConnection.query(sql);
-
-initialiseDatabase();
+    dbConnection.query(sql);
+  });
+}
 
 module.exports = initialiseDatabase;
-
-
